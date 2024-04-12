@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</head>
+
+<body class="font-[Poppins] bg-gradient-to-t from-[#7ebc95] to-[#becce5] h-screen">
+    <header class="bg-white">
+        <nav class="flex justify-between items-center w-[92%]  mx-auto">
+            <div>
+                <img class="w-16 cursor-pointer" src="./images/LearnQuestLogo.png" alt="...">
+            </div>
+            <div
+                class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+                    <li>
+                        <a class="hover:text-gray-500" href="#">Courses</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="#">Notes</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="#">Educators</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="#">Help</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="#">Subscription</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex items-center gap-6">
+                <button class="bg-[#a6c1ee] text-white px-5 py-2 hover:bg-[#87acec]">My Profile</button>
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+            </div>
+    </header>
+
+    <h1 class="text-3xl font-bold mb-8">Available Courses</h1>
+
+    <div class="flex justify-between">
+        <div class="w-1/4 mx-4 ml-32">
+            <div class="bg-white rounded-lg shadow-md p-4">
+                <div class="flex justify-center mb-4">
+                <img src="./images/physics.png" alt="Physics" class="w-48 h-48 mb-4">
+                </div>
+                <h2 class="text-xl font-bold mb-2">Physics</h2>
+                <p class="text-sm text-gray-600 mb-4">Explore the fundamental laws of nature.</p>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-full">
+                    Course Details
+                </button>
+                <div class="dropdown-content hidden absolute z-50">
+                    <a href="physics_class9.html" class="block px-4 py-2 text-sm hover:bg-gray-200">Class 9</a>
+                    <a href="physics_class10.html" class="block px-4 py-2 text-sm hover:bg-gray-200">Class 10</a>
+                    <a href="physics_class11.html" class="block px-4 py-2 text-sm hover:bg-gray-200">Class 11</a>
+                    <a href="physics_class12.html" class="block px-4 py-2 text-sm hover:bg-gray-200">Class 12</a>
+                    <!-- Add more chapters as needed -->
+                </div>
+            </div>
+        </div>
+
+        <div class="w-1/4 mx-4">
+            <div class="bg-white rounded-lg shadow-md p-4">
+                <div class="flex justify-center mb-4">
+                <img src="./images/chemistry.webp" alt="Chemistry" class="w-48 h-48 mb-4">
+                </div>
+                <h2 class="text-xl font-bold mb-2">Chemistry</h2>
+                <p class="text-sm text-gray-600 mb-4">Discover the properties and behavior of matter.</p>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-full">
+                    Course Details
+                </button>
+                <div class="dropdown-content hidden absolute z-50">
+                    <a href="chemistry_class9.html" class="block px-4 py-2 text-sm hover:bg-gray-200">Class 9</a>
+                    <a href="chemistry_class10.html" class="block px-4 py-2 text-sm hover:bg-gray-200">Class 10</a>
+                    <a href="chemistry_class11.html" class="block px-4 py-2 text-sm hover:bg-gray-200">Class 11</a>
+                    <a href="chemistry_class12.html" class="block px-4 py-2 text-sm hover:bg-gray-200">Class 12</a>
+                    <!-- Add more chapters as needed -->
+                </div>
+            </div>
+        </div>
+
+        <div class="w-1/4 mx-4 mr-32">
+            <div class="bg-white rounded-lg shadow-md p-4">
+                <div class="flex justify-center mb-4">
+                <img src="./images/math.jpg" alt="Mathematics" class="w-48 h-48  mb-4">
+                </div>
+                <h2 class="text-xl font-bold mb-2">Mathematics</h2>
+                <p class="text-sm text-gray-600 mb-4">Unlock the beauty of numbers and patterns.</p>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-full">
+                    Course Details
+                </button>
+                <div class="dropdown-content hidden absolute z-50">
+                    <a href="maths_class9.html" class="block px-4 py-2 text-sm hover:bg-gray-200">Class 9</a>
+                    <a href="maths_class10.html" class="block px-4 py-2 text-sm hover:bg-gray-200">Class 10</a>
+                    <a href="maths_class11.html" class="block px-4 py-2 text-sm hover:bg-gray-200">Class 11</a>
+                    <a href="maths_class12.html" class="block px-4 py-2 text-sm hover:bg-gray-200">Class 12</a>
+                    <!-- Add more chapters as needed -->
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+
+
+    <script>
+        const navLinks = document.querySelector('.nav-links')
+        function onToggleMenu(e){
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[9%]')
+        }
+
+        // JavaScript to toggle the visibility of the dropdown content
+        document.querySelectorAll('.bg-blue-500').forEach(button => {
+            button.addEventListener('click', function () {
+                const dropdownContent = this.nextElementSibling;
+                dropdownContent.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+
+</html>
