@@ -12,11 +12,11 @@
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </head>
 
-<body class="font-[Poppins] bg-gradient-to-t from-[#7ebc95] to-[#becce5] h-screen">
-    <header class="bg-white">
-        <nav class="flex justify-between items-center w-[92%]  mx-auto">
+<body class="font-[Poppins] bg-gradient-to-t from-[#7ebc95] to-[#becce5] v-screen">
+    <header class="bg-white fixed top-0 left-0 right-0 z-50">
+        <nav class="flex justify-between items-center w-[92%]  mx-auto px-5 py-5">
             <div>
-                <img class="w-16 cursor-pointer" src="./images/LearnQuestLogo.png" alt="...">
+                <img class="w-40 cursor-pointer" src="./images/Logo.png" alt="...">
             </div>
             <div
                 class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
@@ -44,7 +44,282 @@
             </div>
     </header>
 
+    <div class="container mx-auto flex">
+        <!-- Filter panel -->
+        <div class="w-1/6 bg-white shadow-md p-4 mb-8 mr-4 ">
+            <h2 class="text-xl font-bold mb-4">Subjects</h2>
+            <ul class="mb-4">
+                <li><a href="#" class="text-blue-500">Chemistry</a></li>
+                <li><a href="#" class="text-blue-500">Physics</a></li>
+                <li><a href="#" class="text-blue-500">Maths</a></li>
+            </ul>
+            <hr>
+            <h2 class="text-xl font-bold mb-4">Classes</h2>
+            <ul>
+                <li><a href="#" class="text-blue-500">Class 9th</a></li>
+                <li><a href="#" class="text-blue-500">Class 10th</a></li>
+                <li><a href="#" class="text-blue-500">Class 11th</a></li>
+                <li><a href="#" class="text-blue-500">Class 12th</a></li>
+            </ul>
+        </div>
+
+    <div class="container mx-auto">
+        <div class="flex flex-col items-center">
+            <!-- Card 1: Class 9th -->
+            <div class="bg-white rounded-lg shadow-md p-4 mb-8 mt-4 flex items-centre ">
+                <h2 class="text-xl font-bold">Class 10th</h2>
+            </div>
+
+            <!-- Card 2: Chemistry with image -->
+            <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 flex items-center ">
+                <img src="./images/math.jpg" alt="Maths Image" class="w-16 h-16 mr-4">
+                <div>
+                    <h2 class="text-3xl font-bold mb-2">MATHS Class 10</h2>
+                </div>
+            </div>
+            
+            
+            <!-- Card 3: Chapter list with buttons -->
+            <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                <h3 class="text-xl font-bold mb-4">Chapter 1: Real Numbers</h3>
+                <table class="w-full">
+                    <tr>
+                        <td colspan="2">
+                            <a href="#" class="text-black-500">Real Numbers</a>
+                        </td>
+                        <td class="text-right">
+                            <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter1')">Open</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li><p class="text-blue-500">Introduction to Real Numbers</p></li>
+                                <li><p class="text-blue-500">Euclid’s Division Lemma</p></li>
+                                <li><p class="text-blue-500">The Fundamental Theorem of Arithmetic</p></li>
+                                <li><p class="text-blue-500">Revisiting Irrational Numbers</p></li>
+                                <li><p class="text-blue-500">Revisiting Rational Numbers and Their Decimal Expansions</p></li>
+                                <li><p class="text-blue-500">Summary</p></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                <h3 class="text-xl font-bold mb-4">Chapter 2: Polynomials</h3>
+                <table class="w-full">
+                    <tr>
+                        <td colspan="2">
+                            <a href="#" class="text-black-500">Polynomials</a>
+                        </td>
+                        <td class="text-right">
+                            <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter2')">Open</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li><p class="text-blue-500">Introduction Polynomials</p></li>
+                                <li><p class="text-blue-500">Geometrical Meaning of the Zeroes of a Polynomial</p></li>
+                                <li><p class="text-blue-500">Relationship between Zeroes and Coefficients of a Polynomial</p></li>
+                                <li><p class="text-blue-500">Division Algorithm for Polynomials</p></li>
+                                <li><p class="text-blue-500">Summary</p></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                <h3 class="text-xl font-bold mb-4">Chapter 3</h3>
+                <table class="w-full">
+                    <tr>
+                        <td colspan="2">
+                            <a href="#" class="text-black-500">Pair Of Linear Equations In Two Variables</a>
+                        </td>
+                        <td class="text-right">
+                            <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter3')">Open</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li><p class="text-blue-500">Introduction to Pair Of Linear Equations In Two Variables</p></li>
+                                <li><p class="text-blue-500">Pair of Linear Equations in Two Variables</p></li>
+                                <li><p class="text-blue-500">Graphical Method of Solution of a Pair of Linear Equations</p></li>
+                                <li><p class="text-blue-500">Algebraic Methods of Solving a Pair of Linear Equations</p></li>
+                                <li><p class="text-blue-500">Equations Reducible to a Pair of Linear Equations in Two Variables</p></li>
+                                <li><p class="text-blue-500">Summary</p></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                <h3 class="text-xl font-bold mb-4">Chapter 4</h3>
+                <table class="w-full">
+                    <tr>
+                        <td colspan="2">
+                            <a href="#" class="text-black-500">Quadratic Equations</a>
+                        </td>
+                        <td class="text-right">
+                            <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter4')">Open</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li><p class="text-blue-500">Introduction to Quadratic Equations</p></li>
+                                <li><p class="text-blue-500">Quadratic Equations</p></li>
+                                <li><p class="text-blue-500">Solution of a Quadratic Equation by Factorisation</p></li>
+                                <li><p class="text-blue-500">Solution of a Quadratic Equation by Completing the Square</p></li>
+                                <li><p class="text-blue-500">Nature of Roots</p></li>
+                                <li><p class="text-blue-500">Summary</p></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                <h3 class="text-xl font-bold mb-4">Chapter 5</h3>
+                <table class="w-full">
+                    <tr>
+                        <td colspan="2">
+                            <a href="#" class="text-black-500">Arithmetic Progressions</a>
+                        </td>
+                        <td class="text-right">
+                            <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter5')">Open</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li><p class="text-blue-500">Introduction Arithmetic Progressions</p></li>
+                                <li><p class="text-blue-500">nth Term of an AP</p></li>
+                                <li><p class="text-blue-500">Sum of First n Terms of an AP</p></li>
+                                <li><p class="text-blue-500">Summary</p></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                <h3 class="text-xl font-bold mb-4">Chapter 6</h3>
+                <table class="w-full">
+                    <tr>
+                        <td colspan="2">
+                            <a href="#" class="text-black-500">Triangles</a>
+                        </td>
+                        <td class="text-right">
+                            <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter6')">Open</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li><p class="text-blue-500">Triangles Introduction</p></li>
+                                <li><p class="text-blue-500">Similar Figures</p></li>
+                                <li><p class="text-blue-500">Similarity of Triangles</p></li>
+                                <li><p class="text-blue-500">Criteria for Similarity of Triangles</p></li>
+                                <li><p class="text-blue-500">Areas of Similar Triangles</p></li>
+                                <li><p class="text-blue-500">Pythagoras Theorem</p></li>
+                                <li><p class="text-blue-500">Summary</p></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+             
+             
+            
+             
+            <div>
+                <iframe id="chapter1Video" width="700" height="393.75" src="https://www.youtube.com/embed/CobQvtjL5gc?si=vpFlN7Re5Fq19Dnf" title="Chapter 1 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none;"></iframe>
+                <iframe id="chapter2Video" width="700" height="393.75" src="https://www.youtube.com/embed/M437dqOxJcs?si=6OcrN_ZPjZelggn3" title="Chapter 2 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                <iframe id="chapter3Video" width="700" height="393.75" src="https://www.youtube.com/embed/aD-V0OT1_C4?si=CFCe54g3dkaO2xFX" title="Chapter 3 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                <iframe id="chapter4Video" width="700" height="393.75" src="https://www.youtube.com/embed/GtKXeWrZeuk?si=kBCn5dTq3wofR2FL" title="Chapter 4 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                <iframe id="chapter5Video" width="700" height="393.75" src="https://www.youtube.com/embed/zPKdZKBG4oQ?si=7vGm2QuT5ZnQfnar" title="Chapter 5 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                <iframe id="chapter6Video" width="700" height="393.75" src="https://www.youtube.com/embed/OWG8-Sizxn0?si=zNsacGzJgjyMoLjz" title="Chapter 6 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                
+            </div>
+            
+            <button id="backButton" class="text-blue-500" style="display: none; border: 1px solid black; padding: 10px; margin-top: 1rem; margin-bottom:1rem;" onclick="hideVideo()">Back</button>
+            </div>
+
+            <footer class="w-full bg-gray-200 py-4 px-6 bottom-0 left-0 right-0">
+                <div class="container mx-auto flex justify-between">
+                    <div>
+                        <h2 class="text-xl font-bold mb-2 ">Contact Details</h2>
+                        <p class="text-gray-600">Phone: +91-98765-43210</p>
+                        <p class="text-gray-600">Email: learnquest@gmail.com</p>
+                    </div>
+        
+                    <div>
+                        <h2 class="text-xl font-bold mb-2">Classes</h2>
+                        <ul>
+                            <li><a href="#" class="text-blue-500">Class 9th</a></li>
+                            <li><a href="#" class="text-blue-500">Class 10th</a></li>
+                            <li><a href="#" class="text-blue-500">Class 11th</a></li>
+                            <li><a href="#" class="text-blue-500">Class 12th</a></li>
+                        </ul>
+                    </div>
+        
+                    <div class="">
+                        <h2 class="text-xl font-bold mb-2 ">Subjects</h2>
+                        <ul>
+                            <li><a href="#" class="text-blue-500">Physics</a></li>
+                            <li><a href="#" class="text-blue-500">Chemistry</a></li>
+                            <li><a href="#" class="text-blue-500">Mathematics</a></li>
+                        </ul>
+                    </div>
+                </div>
+                </footer>
+        </div>
+
+        
+        <script>
+            const navLinks = document.querySelector('.nav-links')
+            function onToggleMenu(e){
+                e.name = e.name === 'menu' ? 'close' : 'menu'
+                navLinks.classList.toggle('top-[9%]')
+            }
     
-    
+            // JavaScript to toggle the visibility of the dropdown content
+            document.querySelectorAll('.bg-blue-500').forEach(button => {
+                button.addEventListener('click', function () {
+                    const dropdownContent = this.nextElementSibling;
+                    dropdownContent.classList.toggle('hidden');
+                });
+            });
+            
+            function playVideo(chapter) {
+                var cards = document.querySelectorAll('.toHide');
+                for (var i = 0; i < cards.length; i++) {
+                    cards[i].style.display = 'none';
+                }
+        
+                document.getElementById(chapter + 'Video').style.display = 'block';
+                document.getElementById('backButton').style.display = 'block';
+            }
+
+            function hideVideo() {
+                var videos = document.querySelectorAll('iframe');
+                for (var i = 0; i < videos.length; i++) {
+                    videos[i].style.display = 'none';
+                }
+
+                var cards = document.querySelectorAll('.toHide');
+                for (var i = 0; i < cards.length; i++) {
+                    cards[i].style.display = 'block';
+                }
+
+                document.getElementById('backButton').style.display = 'none';
+            }
+        </script>
 </body>
 </html>

@@ -12,11 +12,11 @@
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </head>
 
-<body class="font-[Poppins] bg-gradient-to-t from-[#7ebc95] to-[#becce5] h-screen">
-    <header class="bg-white">
-        <nav class="flex justify-between items-center w-[92%]  mx-auto">
+<body class="font-[Poppins] bg-gradient-to-t from-[#7ebc95] to-[#becce5] v-screen">
+    <header class="bg-white fixed top-0 left-0 right-0 z-50">
+        <nav class="flex justify-between items-center w-[92%]  mx-auto px-5 py-5">
             <div>
-                <img class="w-16 cursor-pointer" src="./images/LearnQuestLogo.png" alt="...">
+                <img class="w-40 cursor-pointer" src="./images/Logo.png" alt="...">
             </div>
             <div
                 class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
@@ -44,7 +44,512 @@
             </div>
     </header>
 
+    <div class="container mx-auto flex">
+        <!-- Filter panel -->
+        <div class="w-1/6 bg-white shadow-md p-4 mb-8 mr-4 ">
+            <h2 class="text-xl font-bold mb-4">Subjects</h2>
+            <ul class="mb-4">
+                <li><a href="#" class="text-blue-500">Chemistry</a></li>
+                <li><a href="#" class="text-blue-500">Physics</a></li>
+                <li><a href="#" class="text-blue-500">Maths</a></li>
+            </ul>
+            <hr>
+            <h2 class="text-xl font-bold mb-4">Classes</h2>
+            <ul>
+                <li><a href="#" class="text-blue-500">Class 9th</a></li>
+                <li><a href="#" class="text-blue-500">Class 10th</a></li>
+                <li><a href="#" class="text-blue-500">Class 11th</a></li>
+                <li><a href="#" class="text-blue-500">Class 12th</a></li>
+            </ul>
+        </div>
+
+    <div class="container mx-auto">
+        <div class="flex flex-col items-center">
+            <!-- Card 1: Class 9th -->
+            <div class="bg-white rounded-lg shadow-md p-4 mb-8 mt-4 flex items-centre ">
+                <h2 class="text-xl font-bold">Class 9th</h2>
+            </div>
+
+            <!-- Card 2: Chemistry with image -->
+            <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 flex items-center ">
+                <img src="./images/math.jpg" alt="Maths Image" class="w-16 h-16 mr-4">
+                <div>
+                    <h2 class="text-3xl font-bold mb-2">MATHS Class 9</h2>
+                    <!-- Add any additional text or elements here -->
+                </div>
+            </div>
+            
+            
+            <!-- Card 3: Chapter list with buttons -->
+            <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                <h3 class="text-xl font-bold mb-4">Chapter 1</h3>
+                <table class="w-full">
+                    <tr>
+                        <td colspan="2">
+                            <a href="#" class="text-black-500">Number Systems</a>
+                        </td>
+                        <td class="text-right">
+                            <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter1')">Open</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li><p class="text-blue-500">Introduction to Number Systems</p></li>
+                                <li><p class="text-blue-500">Irrational Numbers</p></li>
+                                <li><p class="text-blue-500">Real Numbers and Their Decimal Expansions</p></li>
+                                <li><p class="text-blue-500">Representing Real Numbers on the Number Line</p></li>
+                                <li><p class="text-blue-500">Operations on Real Numbers</p></li>
+                                <li><p class="text-blue-500">Laws of Exponents for Real Numbers</p></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                <h3 class="text-xl font-bold mb-4">Chapter 2</h3>
+                <table class="w-full">
+                    <tr>
+                        <td colspan="2">
+                            <a href="#" class="text-black-500">Polynomials</a>
+                        </td>
+                        <td class="text-right">
+                            <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter2')">Open</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li><p class="text-blue-500">Introduction to Polynomials</p></li>
+                                <li><p class="text-blue-500">Polynomials in One Variable</p></li>
+                                <li><p class="text-blue-500">Zeros of a Polynomial</p></li>
+                                <li><p class="text-blue-500">Remainder Theorem</p></li>
+                                <li><p class="text-blue-500">Factorisation of Polynomials</p></li>
+                                <li><p class="text-blue-500">Algebraic Identities</p></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                <h3 class="text-xl font-bold mb-4">Chapter 3</h3>
+                <table class="w-full">
+                    <tr>
+                        <td colspan="2">
+                            <a href="#" class="text-black-500">Coordinate Geometry</a>
+                        </td>
+                        <td class="text-right">
+                            <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter3')">Open</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li><p class="text-blue-500">Introduction to Coordinate Geometry</p></li>
+                                <li><p class="text-blue-500">Cartesian System</p></li>
+                                <li><p class="text-blue-500">Plotting a Point in the Plane if its Coordinates are given</p></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                <h3 class="text-xl font-bold mb-4">Chapter 4</h3>
+                <table class="w-full">
+                    <tr>
+                        <td colspan="2">
+                            <a href="#" class="text-black-500">Linear Equations in Two Variables</a>
+                        </td>
+                        <td class="text-right">
+                            <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter4')">Open</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li><p class="text-blue-500">Introduction to Linear Equations in Two Variables</p></li>
+                                <li><p class="text-blue-500">Linear Equations</p></li>
+                                <li><p class="text-blue-500">Solution of a Linear Equation</p></li>
+                                <li><p class="text-blue-500">Graph of a Linear Equation in Two Variables</p></li>
+                                <li><p class="text-blue-500">Equations of Lines Parallel to x-axis and y-axis</p></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                <h3 class="text-xl font-bold mb-4">Chapter 5</h3>
+                <table class="w-full">
+                    <tr>
+                        <td colspan="2">
+                            <a href="#" class="text-black-500">Euclid’s Geometry</a>
+                        </td>
+                        <td class="text-right">
+                            <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter5')">Open</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li><p class="text-blue-500">Introduction to Euclid’s Geometry</p></li>
+                                <li><p class="text-blue-500">Euclid’s Definitions, Axioms and Postulates</p></li>
+                                <li><p class="text-blue-500">Equivalent Versions of Euclid’s Fifth Postulate</p></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                <h3 class="text-xl font-bold mb-4">Chapter 6</h3>
+                <table class="w-full">
+                    <tr>
+                        <td colspan="2">
+                            <a href="#" class="text-black-500">Lines and Angles</a>
+                        </td>
+                        <td class="text-right">
+                            <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter6')">Open</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li><p class="text-blue-500">Introduction to Lines and Angles</p></li>
+                                <li><p class="text-blue-500">Basic Terms and Definitions</p></li>
+                                <li><p class="text-blue-500">Intersecting Lines and Non-intersecting Lines</p></li>
+                                <li><p class="text-blue-500">Pairs of Angles</p></li>
+                                <li><p class="text-blue-500">Parallel Lines and a Transversal</p></li>
+                                <li><p class="text-blue-500">Lines Parallel to the same Line</p></li>
+                                <li><p class="text-blue-500">Angle Sum Property of a Triangle</p></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                <h3 class="text-xl font-bold mb-4">Chapter 7</h3>
+                <table class="w-full">
+                    <tr>
+                        <td colspan="2">
+                            <a href="#" class="text-black-500">Triangles</a>
+                        </td>
+                        <td class="text-right">
+                            <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter7')">Open</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li><p class="text-blue-500">Introduction</p></li>
+                                <li><p class="text-blue-500">Congruence of Triangles</p></li>
+                                <li><p class="text-blue-500">Criteria for Congruence of Triangles</p></li>
+                                <li><p class="text-blue-500">Some Properties of a Triangle</p></li>
+                                <li><p class="text-blue-500">Some More Criteria for Congruence of Triangles</p></li>
+                                <li><p class="text-blue-500">Inequalities in a Triangle</p></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                <h3 class="text-xl font-bold mb-4">Chapter 8</h3>
+                <table class="w-full">
+                    <tr>
+                        <td colspan="2">
+                            <a href="#" class="text-black-500">Quadrilaterals</a>
+                        </td>
+                        <td class="text-right">
+                            <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter8')">Open</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li><p class="text-blue-500">Introduction to Quadrilaterals</p></li>
+                                <li><p class="text-blue-500">Angle Sum Property of a Quadrilateral</p></li>
+                                <li><p class="text-blue-500">Types of Quadrilaterals</p></li>
+                                <li><p class="text-blue-500">Properties of a Parallelogram</p></li>
+                                <li><p class="text-blue-500">Another Condition for a Quadrilateral to be a Parallelogram</p></li>
+                                <li><p class="text-blue-500">The Mid-point Theorem</p></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                <h3 class="text-xl font-bold mb-4">Chapter 9</h3>
+                <table class="w-full">
+                    <tr>
+                        <td colspan="2">
+                            <a href="#" class="text-black-500">Areas of Parallelograms and Triangles</a>
+                        </td>
+                        <td class="text-right">
+                            <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter9')">Open</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li><p class="text-blue-500">Introduction to Areas of Parallelograms and Triangles</p></li>
+                                <li><p class="text-blue-500">Figures on the same Base and Between the same Parallels</p></li>
+                                <li><p class="text-blue-500">Parallelograms on the same Base and between the same Parallels</p></li>
+                                <li><p class="text-blue-500">Triangles on the same Base and between the same Parallels</p></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                <h3 class="text-xl font-bold mb-4">Chapter 10</h3>
+                <table class="w-full">
+                    <tr>
+                        <td colspan="2">
+                            <a href="#" class="text-black-500">Circles</a>
+                        </td>
+                        <td class="text-right">
+                            <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter10')">Open</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li><p class="text-blue-500">Introduction to Circles</p></li>
+                                <li><p class="text-blue-500">Circles and its Related Terms: A Review</p></li>
+                                <li><p class="text-blue-500">Angle Subtended by a Chord at a Point</p></li>
+                                <li><p class="text-blue-500">Perpendicular from the Centre to a Chord</p></li>
+                                <li><p class="text-blue-500">Circle through Three Points</p></li>
+                                <li><p class="text-blue-500">Equal Chords and their Distances from the Centre</p></li>
+                                <li><p class="text-blue-500">Angle Subtended by an Arc of a Circle</p></li>
+                                <li><p class="text-blue-500">Cyclic Quadrilaterals</p></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                <h3 class="text-xl font-bold mb-4">Chapter 11</h3>
+                <table class="w-full">
+                    <tr>
+                        <td colspan="2">
+                            <a href="#" class="text-black-500">Constructions</a>
+                        </td>
+                        <td class="text-right">
+                            <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter11')">Open</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li><p class="text-blue-500">Introduction to Constructions</p></li>
+                                <li><p class="text-blue-500">Basic Constructions</p></li>
+                                <li><p class="text-blue-500">Some Constructions of Triangles</p></li>
+                                <li><p class="text-blue-500">Summary</p></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                <h3 class="text-xl font-bold mb-4">Chapter 12</h3>
+                <table class="w-full">
+                    <tr>
+                        <td colspan="2">
+                            <a href="#" class="text-black-500">Heron’s Formula</a>
+                        </td>
+                        <td class="text-right">
+                            <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter12')">Open</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li><p class="text-blue-500">Introduction to Heron’s Formula</p></li>
+                                <li><p class="text-blue-500">Area of a Triangle – by Heron’s Formula</p></li>
+                                <li><p class="text-blue-500">Application of Heron’s Formula in finding Areas of Quadrilaterals</p></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                <h3 class="text-xl font-bold mb-4">Chapter 13</h3>
+                <table class="w-full">
+                    <tr>
+                        <td colspan="2">
+                            <a href="#" class="text-black-500">Surface Areas and Volumes</a>
+                        </td>
+                        <td class="text-right">
+                            <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter13')">Open</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li><p class="text-blue-500">Introduction to Surface Areas and Volumes</p></li>
+                                <li><p class="text-blue-500">Surface Area of a Cuboid and a Cube</p></li>
+                                <li><p class="text-blue-500">Surface Area of a Right Circular Cylinder</p></li>
+                                <li><p class="text-blue-500">Surface Area of a Right Circular Cone</p></li>
+                                <li><p class="text-blue-500">Surface Area of a Sphere</p></li>
+                                <li><p class="text-blue-500">Volume of a Cuboid</p></li>
+                                <li><p class="text-blue-500">Volume of a Cylinder</p></li>
+                                <li><p class="text-blue-500">Volume of a Right Circular Cone</p></li>
+                                <li><p class="text-blue-500">Volume of a Sphere</p></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                <h3 class="text-xl font-bold mb-4">Chapter 14</h3>
+                <table class="w-full">
+                    <tr>
+                        <td colspan="2">
+                            <a href="#" class="text-black-500">Statistics</a>
+                        </td>
+                        <td class="text-right">
+                            <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter14')">Open</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li><p class="text-blue-500">Introduction to Statistics</p></li>
+                                <li><p class="text-blue-500">Collection of Data</p></li>
+                                <li><p class="text-blue-500">Presentation of Data</p></li>
+                                <li><p class="text-blue-500">Graphical Representation of Data</p></li>
+                                <li><p class="text-blue-500">Measures of Central Tendency</p></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                <h3 class="text-xl font-bold mb-4">Chapter 15</h3>
+                <table class="w-full">
+                    <tr>
+                        <td colspan="2">
+                            <a href="#" class="text-black-500">Probability</a>
+                        </td>
+                        <td class="text-right">
+                            <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter15')">Open</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li><p class="text-blue-500">Introduction to Probability</p></li>
+                                <li><p class="text-blue-500">Probability – an Experimental Approach</p></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+             
+            
+            <div>
+                <iframe id="chapter1Video" width="700" height="393.75" src="https://www.youtube.com/embed/xn2HskGqSkI?si=QLwa-OUWsfmhZYrz" title="Chapter 1 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none;"></iframe>
+                <iframe id="chapter2Video" width="700" height="393.75" src="https://www.youtube.com/embed/roFOxpZtiV4?si=BiexMQLZGKFwDf_w" title="Chapter 2 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                <iframe id="chapter3Video" width="700" height="393.75" src="https://www.youtube.com/embed/xy5-dN_F1EY?si=bkFFu00ganJU7d1X" title="Chapter 3 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                <iframe id="chapter4Video" width="700" height="393.75" src="https://www.youtube.com/embed/mYrKse4WKsQ?si=LKTmmqdajygDp_bv" title="Chapter 4 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                <iframe id="chapter5Video" width="700" height="393.75" src="https://www.youtube.com/embed/TN4yzAvyTyA?si=GaGRT-NrN-5ZNqph" title="Chapter 5 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                <iframe id="chapter6Video" width="700" height="393.75" src="https://www.youtube.com/embed/nEYldznpZmk?si=tDgcocpgK7pwvKM0" title="Chapter 6 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                <iframe id="chapter7Video" width="700" height="393.75" src="https://www.youtube.com/embed/wIeiqvdVCJI?si=Yb1hVVCZcBZlhwka" title="Chapter 7 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                <iframe id="chapter8Video" width="700" height="393.75" src="https://www.youtube.com/embed/STrfPXdTzUA?si=h8SorjCMiCdZT-NR" title="Chapter 8 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                <iframe id="chapter9Video" width="700" height="393.75" src="https://www.youtube.com/embed/eU3TKYrdAmU?si=VfIOBX8wjw-3kmhO" title="Chapter 9 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                <iframe id="chapter10Video" width="700" height="393.75" src="https://www.youtube.com/embed/bTOzfqFN1gI?si=DEkd2FZHLG0PBS5u" title="Chapter 10 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                <iframe id="chapter11Video" width="700" height="393.75" src="https://www.youtube.com/embed/-oSoYvgOOdo?si=gM-o0nDI41QByh7a" title="Chapter 11 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                <iframe id="chapter12Video" width="700" height="393.75" src="https://www.youtube.com/embed/5NgoP7d-Nmo?si=CesKW58It6YQedY4" title="Chapter 12 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                <iframe id="chapter13Video" width="700" height="393.75" src="https://www.youtube.com/embed/DDr1vzPtBzM?si=dQX3qtAAu5n2U5wy" title="Chapter 13 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                <iframe id="chapter14Video" width="700" height="393.75" src="https://www.youtube.com/embed/xASm_pfKRzQ?si=qTLSGgQGF17kXhLA" title="Chapter 14 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                <iframe id="chapter15Video" width="700" height="393.75" src="https://www.youtube.com/embed/_XT6d6k8J5Q?si=X2uzDKtZ0-YTg7M_" title="Chapter 15 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                
+            </div>
+            
+            <button id="backButton" class="text-blue-500" style="display: none; border: 1px solid black; padding: 10px; margin-top: 1rem; margin-bottom:1rem;" onclick="hideVideo()">Back</button>
+            </div>
+
+            <footer class="w-full bg-gray-200 py-4 px-6 bottom-0 left-0 right-0">
+                <div class="container mx-auto flex justify-between">
+                    <div>
+                        <h2 class="text-xl font-bold mb-2 ">Contact Details</h2>
+                        <p class="text-gray-600">Phone: +91-98765-43210</p>
+                        <p class="text-gray-600">Email: learnquest@gmail.com</p>
+                    </div>
+        
+                    <div>
+                        <h2 class="text-xl font-bold mb-2">Classes</h2>
+                        <ul>
+                            <li><a href="#" class="text-blue-500">Class 9th</a></li>
+                            <li><a href="#" class="text-blue-500">Class 10th</a></li>
+                            <li><a href="#" class="text-blue-500">Class 11th</a></li>
+                            <li><a href="#" class="text-blue-500">Class 12th</a></li>
+                        </ul>
+                    </div>
+        
+                    <div class="">
+                        <h2 class="text-xl font-bold mb-2 ">Subjects</h2>
+                        <ul>
+                            <li><a href="#" class="text-blue-500">Physics</a></li>
+                            <li><a href="#" class="text-blue-500">Chemistry</a></li>
+                            <li><a href="#" class="text-blue-500">Mathematics</a></li>
+                        </ul>
+                    </div>
+                </div>
+                </footer>
+        </div>
+
+        
+        <script>
+            const navLinks = document.querySelector('.nav-links')
+            function onToggleMenu(e){
+                e.name = e.name === 'menu' ? 'close' : 'menu'
+                navLinks.classList.toggle('top-[9%]')
+            }
     
-    
+            // JavaScript to toggle the visibility of the dropdown content
+            document.querySelectorAll('.bg-blue-500').forEach(button => {
+                button.addEventListener('click', function () {
+                    const dropdownContent = this.nextElementSibling;
+                    dropdownContent.classList.toggle('hidden');
+                });
+            });
+            
+            function playVideo(chapter) {
+                var cards = document.querySelectorAll('.toHide');
+                for (var i = 0; i < cards.length; i++) {
+                    cards[i].style.display = 'none';
+                }
+        
+                document.getElementById(chapter + 'Video').style.display = 'block';
+                document.getElementById('backButton').style.display = 'block';
+            }
+
+            function hideVideo() {
+                var videos = document.querySelectorAll('iframe');
+                for (var i = 0; i < videos.length; i++) {
+                    videos[i].style.display = 'none';
+                }
+
+                var cards = document.querySelectorAll('.toHide');
+                for (var i = 0; i < cards.length; i++) {
+                    cards[i].style.display = 'block';
+                }
+
+                document.getElementById('backButton').style.display = 'none';
+            }
+        </script>
 </body>
 </html>

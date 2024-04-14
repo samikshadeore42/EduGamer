@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</head>
+
+<body class="font-[Poppins] bg-gradient-to-t from-[#7ebc95] to-[#becce5] v-screen">
+    <header class="bg-white fixed top-0 left-0 right-0 z-50">
+        <nav class="flex justify-between items-center w-[92%]  mx-auto px-5 py-5">
+            <div>
+                <img class="w-40 cursor-pointer" src="./images/Logo.png" alt="...">
+            </div>
+            <div
+                class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+                    <li>
+                        <a class="hover:text-gray-500" href="#">Courses</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="#">Notes</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="#">Educators</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="#">Help</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="#">Subscription</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="relative inline-block">
+                <button id="profileBtn" class="bg-[#a6c1ee] text-white px-5 py-2 hover:bg-[#87acec]">My Profile</button>
+                <div id="profileDropdown" class="hidden absolute right-0 mt-2 py-2 w-48 bg-white border rounded-lg shadow-lg z-10">
+                  <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Edit Profile</a>
+                  <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Change Password</a>
+                  <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Logout</a>
+                </div>
+              </div>
+              <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+              
+    </header>
+
+        <div class="container mx-auto flex">
+            <!-- Filter panel -->
+            <div class="w-1/6 bg-white shadow-md p-4 mb-8 mr-4 mt-20">
+                <h2 class="text-xl font-bold mb-4">Subjects</h2>
+                <ul class="mb-4">
+                    <li><a href="#" class="text-blue-500">Chemistry</a></li>
+                    <li><a href="#" class="text-blue-500">Physics</a></li>
+                    <li><a href="#" class="text-blue-500">Maths</a></li>
+                </ul>
+                <hr>
+                <h2 class="text-xl font-bold mb-4">Classes</h2>
+                <ul>
+                    <li><a href="#" class="text-blue-500">Class 9th</a></li>
+                    <li><a href="#" class="text-blue-500">Class 10th</a></li>
+                    <li><a href="#" class="text-blue-500">Class 11th</a></li>
+                    <li><a href="#" class="text-blue-500">Class 12th</a></li>
+                </ul>
+            </div>
+
+        <div class="container mx-auto">
+            <div class="flex flex-col items-center">
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 mt-22">
+                    <h2 class="text-xl font-bold">Class 11th</h2>
+                </div>
+
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 flex items-center">
+                    <img src="./images/chemistry.webp" alt="Chemistry Image" class="w-16 h-16 mr-4">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-2">CHEMISTRY Class 11</h2>
+                    </div>
+                </div>
+                
+                
+                <!-- Chapter list with buttons -->
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                    <h3 class="text-xl font-bold mb-4">Chapter 1</h3>
+                    <table class="w-full">
+                        <tr>
+                            <td colspan="2">
+                                <a href="#" class="text-black-500">Some Basic Concepts Of Chemistry</a>
+                            </td>
+                            <td class="text-right">
+                                <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter1')">Open</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <ul>
+                                    <li><p class="text-blue-500">Laws of chemical combination</p></li>
+                                    <li><p class="text-blue-500">Importance and scope of Chemistry</p></li>
+                                    <li><p class="text-blue-500">Dalton's atomic theory</p></li>
+                                    <li><p class="text-blue-500">Atoms and molecules</p></li>
+                                    <li><p class="text-blue-500">Atomic and molecular masses</p></li>
+                                    <li><p class="text-blue-500">Mole concept</p></li>
+                                    <li><p class="text-blue-500">Molar mass</p></li>
+                                    <li><p class="text-blue-500">Percentage composition</p></li>
+                                    <li><p class="text-blue-500">Chemical reactions</p></li>
+                                    <li><p class="text-blue-500">Stoichiometry</p></li>
+                                    <li><p class="text-blue-500">Calculations based on stoichiometry</p></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                            
+                    
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                    <h3 class="text-xl font-bold mb-4">Chapter 2</h3>
+                    <table class="w-full">
+                        <tr>
+                            <td colspan="2">
+                                <a href="#" class="text-black-500">Structure of Atom</a>
+                            </td>
+                            <td class="text-right">
+                                <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter2')">Open</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <ul>
+                                    <li><p class="text-blue-500">Discovery of Electron</p></li>
+                                    <li><p class="text-blue-500">Proton and Neutron</p></li>
+                                    <li><p class="text-blue-500">Atomic Number</p></li>
+                                    <li><p class="text-blue-500">Isotopes and Isobars</p></li>
+                                    <li><p class="text-blue-500">Thomson's Model and its Limitations</p></li>
+                                    <li><p class="text-blue-500">Rutherford's Model and its Limitations</p></li>
+                                    <li><p class="text-blue-500">Bohr's Model and its Limitations</p></li>
+                                    <li><p class="text-blue-500">de Broglie's Relationship</p></li>
+                                    <li><p class="text-blue-500">Heisenberg Uncertainty Principle</p></li>
+                                    <li><p class="text-blue-500">Concept of Orbitals</p></li>
+                                    <li><p class="text-blue-500">Quantum Numbers</p></li>
+                                    <li><p class="text-blue-500">Shapes of s, p and d Orbitals</p></li>
+                                    <li><p class="text-blue-500">Rules for Filling Electrons in Orbitals</p></li>
+                                    <li><p class="text-blue-500">Aufbau Principle</p></li>
+                                    <li><p class="text-blue-500">Pauli's Exclusion Principle</p></li>
+                                    <li><p class="text-blue-500">Hund's Rule</p></li>
+                                    <li><p class="text-blue-500">Electronic Configuration of Atoms</p></li>
+                                    <li><p class="text-blue-500">Stability of Half-filled and Completely Filled Orbitals</p></li>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+
+
+                
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                    <h3 class="text-xl font-bold mb-4">Chapter 3 </h3>
+                    <table class="w-full">
+                        <tr>
+                            <td colspan="2">
+                                <a href="#" class="text-black-500">Periodic Table</a>
+                            </td>
+                            <td class="text-right">
+                                <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter3')">Open</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <ul>
+                                    <li><p class="text-blue-500">Modern Periodic Law and the Present Form of Periodic Table</p></li>
+                                    <li><p class="text-blue-500">Periodic Trends in Properties of Elements</p></li>
+                                    <li><p class="text-blue-500">Atomic Radii</p></li>
+                                    <li><p class="text-blue-500">Ionic Radii</p></li>
+                                    <li><p class="text-blue-500">Inert Gas Radii</p></li>
+                                    <li><p class="text-blue-500">Ionization Enthalpy</p></li>
+                                    <li><p class="text-blue-500">Electron Gain Enthalpy</p></li>
+                                    <li><p class="text-blue-500">Electronegativity</p></li>
+                                    <li><p class="text-blue-500">Valency</p></li>
+                                    <li><p class="text-blue-500">Nomenclature of Elements with Atomic Number Greater than 100</p></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+
+                        
+
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                    <h3 class="text-xl font-bold mb-4">Chapter 4</h3>
+                    <table class="w-full">
+                        <tr>
+                            <td colspan="2">
+                                <a href="#" class="text-black-500">Chemical Bonding And Molecular Structure</a>
+                            </td>
+                            <td class="text-right">
+                                <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter4')">Open</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <ul>
+                                    <li><p class="text-blue-500">Valence electrons</p></li>
+                                    <li><p class="text-blue-500">Ionic bond</p></li>
+                                    <li><p class="text-blue-500">Covalent bond</p></li>
+                                    <li><p class="text-blue-500">Bond parameters</p></li>
+                                    <li><p class="text-blue-500">Lewis structure</p></li>
+                                    <li><p class="text-blue-500">Polar character of covalent bond</p></li>
+                                    <li><p class="text-blue-500">Covalent character of ionic bond</p></li>
+                                    <li><p class="text-blue-500">Valence bond theory</p></li>
+                                    <li><p class="text-blue-500">Resonance</p></li>
+                                    <li><p class="text-blue-500">Geometry of covalent molecules</p></li>
+                                    <li><p class="text-blue-500">VSEPR theory</p></li>
+                                    <li><p class="text-blue-500">Concept of hybridization</p></li>
+                                    <li><p class="text-blue-500">S, p and d orbitals and shapes of some simple molecules</p></li>
+                                    <li><p class="text-blue-500">Molecular orbital theory</p></li>
+                                    <li><p class="text-blue-500">Hydrogen bond</p></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                    <h3 class="text-xl font-bold mb-4">Chapter 5</h3>
+                    <table class="w-full">
+                        <tr>
+                            <td colspan="2">
+                                <a href="#" class="text-black-500">States Of Matter</a>
+                            </td>
+                            <td class="text-right">
+                                <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter5')">Open</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <ul>
+                                    <li><p class="text-blue-500">Three states of matter</p></li>
+                                    <li><p class="text-blue-500">Intermolecular interactions</p></li>
+                                    <li><p class="text-blue-500">Types of bonding</p></li>
+                                    <li><p class="text-blue-500">Melting and boiling points</p></li>
+                                    <li><p class="text-blue-500">Role of gas laws in elucidating the concept of the molecule</p></li>
+                                    <li><p class="text-blue-500">Boyle's law</p></li>
+                                    <li><p class="text-blue-500">Charles law</p></li>
+                                    <li><p class="text-blue-500">Gay Lussac's law</p></li>
+                                    <li><p class="text-blue-500">Avogadro's law</p></li>
+                                    <li><p class="text-blue-500">Ideal behaviour</p></li>
+                                    <li><p class="text-blue-500">Ideal behaviour</p></li>
+                                    <li><p class="text-blue-500">Ideal behaviour</p></li>
+                                    <li><p class="text-blue-500">Ideal behaviour</p></li>
+                                    <li><p class="text-blue-500">Ideal behaviour</p></li>
+                                    <li><p class="text-blue-500">Empirical derivation of gas equation</p></li>
+                                    <li><p class="text-blue-500">Ideal gas equation</p></li>
+                                    <li><p class="text-blue-500">Deviation from ideal behaviour</p></li>
+                                    <li><p class="text-blue-500">Liquefaction of gases</p></li>
+                                    <li><p class="text-blue-500">Critical temperature</p></li>
+                                    <li><p class="text-blue-500">Kinetic energy and molecular speeds</p></li>
+                                    <li><p class="text-blue-500">Liquid State - vapour pressure</p></li>
+                                    <li><p class="text-blue-500">Viscosity and surface tension</p></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                    <h3 class="text-xl font-bold mb-4">Chapter 6</h3>
+                    <table class="w-full">
+                        <tr>
+                            <td colspan="2">
+                                <a href="#" class="text-black-500">Thermodynamics</a>
+                            </td>
+                            <td class="text-right">
+                                <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter6')">Open</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <ul>
+                                    <li><p class="text-blue-500">Concepts of System and types of systems, surroundings, work, heat, energy</p></li>
+                                    <li><p class="text-blue-500">Extensive and intensive properties</p></li>
+                                    <li><p class="text-blue-500">State functions</p></li>
+                                    <li><p class="text-blue-500">First law of thermodynamics</p></li>
+                                    <li><p class="text-blue-500">Internal energy</p></li>
+                                    <li><p class="text-blue-500">Enthalpy</p></li>
+                                    <li><p class="text-blue-500">Heat capacity</p></li>
+                                    <li><p class="text-blue-500">Specific heat</p></li>
+                                    <li><p class="text-blue-500">Measurement of ∆U and ∆H</p></li>
+                                    <li><p class="text-blue-500">Hess's law of constant heat summation</p></li>
+                                    <li><p class="text-blue-500">Enthalpy of bond dissociation</p></li>
+                                    <li><p class="text-blue-500">Combustion, formation, atomization</p></li>
+                                    <li><p class="text-blue-500">Sublimation, phase transition, ionization</p></li>
+                                    <li><p class="text-blue-500">Solution and dilution</p></li>
+                                    <li><p class="text-blue-500">Second law of Thermodynamics (brief introduction)</p></li>
+                                    <li><p class="text-blue-500">Introduction of entropy</p></li>
+                                    <li><p class="text-blue-500">State function</p></li>
+                                    <li><p class="text-blue-500">Gibb's energy change for spontaneous and non-spontaneous processes</p></li>
+                                    <li><p class="text-blue-500">Criteria for equilibrium</p></li>
+                                    <li><p class="text-blue-500">Third law of thermodynamics (brief introduction)</p></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                    <h3 class="text-xl font-bold mb-4">Chapter 7</h3>
+                    <table class="w-full">
+                        <tr>
+                            <td colspan="2">
+                                <a href="#" class="text-black-500">Equilibrium</a>
+                            </td>
+                            <td class="text-right">
+                                <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter7')">Open</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <ul>
+                                    <li><p class="text-blue-500">Equilibrium in physical and chemical processes</p></li>
+                                    <li><p class="text-blue-500">Dynamic nature of equilibrium</p></li>
+                                    <li><p class="text-blue-500">Law of mass action</p></li>
+                                    <li><p class="text-blue-500">Equilibrium constant, factors affecting equilibrium</p></li>
+                                    <li><p class="text-blue-500">Le Chatelier's principle</p></li>
+                                    <li><p class="text-blue-500">Ionic equilibrium</p></li>
+                                    <ul>
+                                        <li><p class="text-blue-500">Ionization of acids and bases</p></li>
+                                        <li><p class="text-blue-500">Strong and weak electrolytes</p></li>
+                                        <li><p class="text-blue-500">Degree of ionization</p></li>
+                                        <li><p class="text-blue-500">Ionization of poly basic acids</p></li>
+                                        <li><p class="text-blue-500">Acid strength</p></li>
+                                        <li><p class="text-blue-500">Concept of pH</p></li>
+                                        <li><p class="text-blue-500">Hydrolysis of salts (elementary idea)</p></li>
+                                        <li><p class="text-blue-500">Buffer solution</p></li>
+                                        <li><p class="text-blue-500">Henderson Equation</p></li>
+                                        <li><p class="text-blue-500">Solubility product</p></li>
+                                        <li><p class="text-blue-500">Common ion effect (with illustrative examples)</p></li>
+                                    </ul>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                    <h3 class="text-xl font-bold mb-4">Chapter 8</h3>
+                    <table class="w-full">
+                        <tr>
+                            <td colspan="2">
+                                <a href="#" class="text-black-500">Redox Reactions</a>
+                            </td>
+                            <td class="text-right">
+                                <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter8')">Open</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <ul>
+                                    <li><p class="text-blue-500">Concept of oxidation and reduction</p></li>
+                                    <li><p class="text-blue-500">Redox reactions</p></li>
+                                    <li><p class="text-blue-500">Oxidation number</p></li>
+                                    <li><p class="text-blue-500">Balancing redox reactions, in terms of loss and gain of electrons and change in oxidation number</p></li>
+                                    <li><p class="text-blue-500">Applications of redox reactions</p></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                    <h3 class="text-xl font-bold mb-4">Chapter 9</h3>
+                    <table class="w-full">
+                        <tr>
+                            <td colspan="2">
+                                <a href="#" class="text-black-500">Hydrogen</a>
+                            </td>
+                            <td class="text-right">
+                                <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter9')">Open</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <ul>
+                                    <li><p class="text-blue-500">Position of hydrogen in periodic table</p></li>
+                                    <li><p class="text-blue-500">Occurrence</p></li>
+                                    <li><p class="text-blue-500">Isotopes</p></li>
+                                    <li><p class="text-blue-500">Preparation, properties of hydrogen</p></li>
+                                    <li><p class="text-blue-500">Uses of hydrogen</p></li>
+                                    <li><p class="text-blue-500">Hydrides - ionic, covalent, and interstitial</p></li>
+                                    <li><p class="text-blue-500">Physical and chemical properties of water</p></li>
+                                    <li><p class="text-blue-500">Heavy water</p></li>
+                                    <li><p class="text-blue-500">Hydrogen peroxide- preparation, reactions, structure, and use</p></li>
+                                    <li><p class="text-blue-500">Hydrogen as a fuel</p></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                    <h3 class="text-xl font-bold mb-4">Chapter 10</h3>
+                    <table class="w-full">
+                        <tr>
+                            <td colspan="2">
+                                <a href="#" class="text-black-500">The s-Block Elements</a>
+                            </td>
+                            <td class="text-right">
+                                <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter10')">Open</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <ul>
+                                    <li><p class="text-blue-500">Group 1 and Group 2 Elements General introduction</p></li>
+                                    <li><p class="text-blue-500">Electronic configuration</p></li>
+                                    <li><p class="text-blue-500">Occurrence, anomalous properties of the first element of each group, diagonal relationship, Trends in the variation of properties (such as ionization enthalpy, atomic and ionic radii)</p></li>
+                                    <li><p class="text-blue-500">Trends in chemical reactivity with oxygen, water, hydrogen and halogens, uses.</p></li>
+                                    <li><p class="text-blue-500">Preparation and Properties of Some Important Compounds: </p>
+                                        <ul>
+                                            <li><p class="text-blue-500">Sodium Carbonate</p></li>
+                                            <li><p class="text-blue-500">Sodium Chloride</p></li>
+                                            <li><p class="text-blue-500">Sodium Hydroxide</p></li>
+                                            <li><p class="text-blue-500">Sodium Hydrogen carbonate</p></li>
+                                            <li><p class="text-blue-500">Biological importance of Sodium and Potassium</p></li>
+                                            <li><p class="text-blue-500">Calcium Oxide</p></li>
+                                            <li><p class="text-blue-500">Calcium Carbonate and their industrial uses</p></li>
+                                            <li><p class="text-blue-500">Biological importance of Magnesium and Calcium.</p></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                    <h3 class="text-xl font-bold mb-4">Chapter 11</h3>
+                    <table class="w-full">
+                        <tr>
+                            <td colspan="2">
+                                <a href="#" class="text-black-500">The p-Block Elements</a>
+                            </td>
+                            <td class="text-right">
+                                <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter11')">Open</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <ul>
+                                    <li><p class="text-blue-500">General Introduction to p-Block Elements</p></li>
+                                    <li><p class="text-blue-500">Group 13 Elements:
+                                        <ul>
+                                            <li>Boron – physical and chemical properties</li>
+                                            <li>Some important compounds:
+                                                <ul>
+                                                    <li>Borax</li>
+                                                    <li>Boric acid</li>
+                                                    <li>Boron Hydrides</li>
+                                                </ul>
+                                            </li>
+                                            <li>Aluminium: Reactions with acids and alkalis</li>
+                                        </ul>
+                                    </p></li>
+                                    <li><p class="text-blue-500">Group 14 Elements:
+                                        <ul>
+                                            <li>Carbon-catenation</li>
+                                            <li>Allotropic forms</li>
+                                            <li>Physical and chemical properties</li>
+                                            <li>Uses of some important compounds:
+                                                <ul>
+                                                    <li>Oxides</li>
+                                                </ul>
+                                            </li>
+                                            <li>Important compounds of Silicon and a few uses:
+                                                <ul>
+                                                    <li>Silicon Tetrachloride</li>
+                                                    <li>Silicones</li>
+                                                    <li>Silicates and Zeolites, their uses</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </p></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                    <h3 class="text-xl font-bold mb-4">Chapter 12</h3>
+                    <table class="w-full">
+                        <tr>
+                            <td colspan="2">
+                                <a href="#" class="text-black-500">Organic Chemistry - Some Basic Principles And Techniques</a>
+                            </td>
+                            <td class="text-right">
+                                <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter12')">Open</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <ul>
+                                    <li><p class="text-blue-500">General introduction</p></li>
+                                    <li><p class="text-blue-500">Methods of purification</p></li>
+                                    <li><p class="text-blue-500">Qualitative analysis</p></li>
+                                    <li><p class="text-blue-500">Quantitative analysis</p></li>
+                                    <li><p class="text-blue-500">Classification and IUPAC nomenclature of organic compounds</p></li>
+                                    <li><p class="text-blue-500">Electronic displacements in a covalent bond: inductive effect, electromeric effect, resonance and hyperconjugation</p></li>
+                                    <li><p class="text-blue-500">Homolytic and heterolytic fission of a covalent bond: free radicals, carbocations, carbanions, electrophiles and nucleophiles</p></li>
+                                    <li><p class="text-blue-500">Types of organic reactions</p></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                    <h3 class="text-xl font-bold mb-4">Chapter 13</h3>
+                    <table class="w-full">
+                        <tr>
+                            <td colspan="2">
+                                <a href="#" class="text-black-500">Hydrocarbons</a>
+                            </td>
+                            <td class="text-right">
+                                <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter13')">Open</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <ul>
+                                    <li><p class="text-blue-500">Classification of Hydrocarbons</p></li>
+                                    <li>
+                                        <p class="text-blue-500">Aliphatic Hydrocarbons</p>
+                                        <ul>
+                                            <li><p class="text-blue-500">Alkanes</p></li>
+                                            <li><p class="text-blue-500">Alkenes</p></li>
+                                            <li><p class="text-blue-500">Alkynes</p></li>
+                                        </ul>
+                                    </li>
+                                    <li><p class="text-blue-500">Aromatic Hydrocarbons</p></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                    <h3 class="text-xl font-bold mb-4">Chapter 14</h3>
+                    <table class="w-full">
+                        <tr>
+                            <td colspan="2">
+                                <a href="#" class="text-black-500">Environmental Chemistry</a>
+                            </td>
+                            <td class="text-right">
+                                <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter14')">Open</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <ul>
+                                    <li><p class="text-blue-500">Environmental pollution – air, water, and soil pollution</p></li>
+                                    <li><p class="text-blue-500">Chemical reactions in the atmosphere</p></li>
+                                    <li><p class="text-blue-500">Smog and its components</p></li>
+                                    <li><p class="text-blue-500">Major atmospheric pollutants and their sources</p></li>
+                                    <li><p class="text-blue-500">Effects of depletion of ozone layer and ozone reactions</p></li>
+                                    <li><p class="text-blue-500">Greenhouse effect, global warming, and their consequences</p></li>
+                                    <li><p class="text-blue-500">Pollution due to industrial wastes and its impact</p></li>
+                                    <li><p class="text-blue-500">Green chemistry as an alternative for pollution reduction</p></li>
+                                    <li><p class="text-blue-500">Strategies for controlling environmental pollution</p></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <!-- iframes -->
+                <div>
+                    <iframe id="chapter1Video" width="700" height="393.75" src="https://www.youtube.com/embed/eIrNJrzeK-o?si=_YL4qOskU0WDPQW_" title="Chapter 1 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none;"></iframe>
+                    <iframe id="chapter2Video" width="700" height="393.75" src="https://www.youtube.com/embed/tDWvkBeHJsg?si=fGurZwdid0U9mCWt" title="Chapter 2 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                    <iframe id="chapter3Video" width="700" height="393.75" src="https://www.youtube.com/embed/8JC4Sx45np8?si=mpa82u7rw5itD-Da" title="Chapter 3 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                    <iframe id="chapter4Video" width="700" height="393.75" src="https://www.youtube.com/embed/tFC_zjf88Cg?si=UhDKtSVlpz3eBsSH" title="Chapter 4 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                    <iframe id="chapter5Video" width="700" height="393.75" src="https://www.youtube.com/embed/QWduKfQjZYE?si=Wd8iNTnydqmFNbBE" title="Chapter 5 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                    <iframe id="chapter6Video" width="700" height="393.75" src="https://www.youtube.com/embed/rhUXxLFo-iI?si=joX6B0UwsMSLBvqU" title="Chapter 6 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                    <iframe id="chapter7Video" width="700" height="393.75" src="https://www.youtube.com/embed/VntTN25XbTI?si=S5hvhYb3CJ3je1wQ" title="Chapter 7 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                    <iframe id="chapter8Video" width="700" height="393.75" src="https://www.youtube.com/embed/6qBHmxW4Xpc?si=tbu-ioVhQ2567IHX" title="Chapter 8 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                    <iframe id="chapter9Video" width="700" height="393.75" src="https://www.youtube.com/embed/fGpxt9IVOiQ?si=f7ysG0SGNxFDgwrc" title="Chapter 9 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                    <iframe id="chapter10Video" width="700" height="393.75" src="https://www.youtube.com/embed/usfapsR2utM?si=b9rqd41PWdiZ4-ZK" title="Chapter 10 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                    <iframe id="chapter11Video" width="700" height="393.75" src="https://www.youtube.com/embed/_ql9A_sA-yU?si=WqpIdTFe23B1qZBQ" title="Chapter 11 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                    <iframe id="chapter12Video" width="700" height="393.75" src="https://www.youtube.com/embed/2wy2ZBVF3CU?si=oSB_uQNwkTemWmE1" title="Chapter 12 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                    <iframe id="chapter13Video" width="700" height="393.75" src="https://www.youtube.com/embed/9g-9Y0S4gZ0?si=rR-sxiteMW1GtnEA" title="Chapter 13 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                    <iframe id="chapter14Video" width="700" height="393.75" src="https://www.youtube.com/embed/dIQfjyOc7H0?si=UkKAI0CXYQPPlUck" title="Chapter 14 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                    
+
+                </div>
+                
+                <button id="backButton" class="text-blue-500" style="display: none; border: 1px solid black; padding: 10px; margin-top: 1rem; margin-bottom:1rem;" onclick="hideVideo()">Back</button>
+                
+            
+            </div>
+        
+            <footer class="w-full bg-gray-200 py-4 px-6 bottom-0 left-0 right-0">
+            <div class="container mx-auto flex justify-between">
+                <div>
+                    <h2 class="text-xl font-bold mb-2">Contact Details</h2>
+                    <p class="text-gray-600">Phone: +91-98765-43210</p>
+                    <p class="text-gray-600">Email: learnquest@gmail.com</p>
+                </div>
+    
+                <div>
+                    <h2 class="text-xl font-bold mb-2">Classes</h2>
+                    <ul>
+                        <li><a href="#" class="text-blue-500">Class 9th</a></li>
+                        <li><a href="#" class="text-blue-500">Class 10th</a></li>
+                        <li><a href="#" class="text-blue-500">Class 11th</a></li>
+                        <li><a href="#" class="text-blue-500">Class 12th</a></li>
+                    </ul>
+                </div>
+    
+                <div>
+                    <h2 class="text-xl font-bold mb-2">Subjects</h2>
+                    <ul>
+                        <li><a href="#" class="text-blue-500">Physics</a></li>
+                        <li><a href="#" class="text-blue-500">Chemistry</a></li>
+                        <li><a href="#" class="text-blue-500">Mathematics</a></li>
+                    </ul>
+                </div>
+            </div>
+            </footer>
+        </div>
+    
+
+
+
+        <script>
+            const navLinks = document.querySelector('.nav-links')
+            function onToggleMenu(e){
+                e.name = e.name === 'menu' ? 'close' : 'menu'
+                navLinks.classList.toggle('top-[9%]')
+            }
+    
+            // JavaScript to toggle the visibility of the dropdown content
+            document.querySelectorAll('.bg-blue-500').forEach(button => {
+                button.addEventListener('click', function () {
+                    const dropdownContent = this.nextElementSibling;
+                    dropdownContent.classList.toggle('hidden');
+                });
+            });
+
+            function playVideo(chapter) {
+                var cards = document.querySelectorAll('.toHide');
+                for (var i = 0; i < cards.length; i++) {
+                    cards[i].style.display = 'none';
+                }
+        
+                document.getElementById(chapter + 'Video').style.display = 'block';
+                document.getElementById('backButton').style.display = 'block';
+            }
+
+            function hideVideo() {
+                var videos = document.querySelectorAll('iframe');
+                for (var i = 0; i < videos.length; i++) {
+                    videos[i].style.display = 'none';
+                }
+
+                var cards = document.querySelectorAll('.toHide');
+                for (var i = 0; i < cards.length; i++) {
+                    cards[i].style.display = 'block';
+                }
+
+                document.getElementById('backButton').style.display = 'none';
+            }
+        
+        </script>
+</body>
+
+
+</html>

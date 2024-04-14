@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</head>
+
+<body class="font-[Poppins] bg-gradient-to-t from-[#7ebc95] to-[#becce5] v-screen">
+    <header class="bg-white fixed top-0 left-0 right-0 z-50">
+        <nav class="flex justify-between items-center w-[92%]  mx-auto px-5 py-5">
+            <div>
+                <img class="w-40 cursor-pointer" src="./images/Logo.png" alt="...">
+            </div>
+            <div
+                class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+                    <li>
+                        <a class="hover:text-gray-500" href="#">Courses</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="#">Notes</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="#">Educators</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="#">Help</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="#">Subscription</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="relative inline-block">
+                <button id="profileBtn" class="bg-[#a6c1ee] text-white px-5 py-2 hover:bg-[#87acec]">My Profile</button>
+                <div id="profileDropdown" class="hidden absolute right-0 mt-2 py-2 w-48 bg-white border rounded-lg shadow-lg z-10">
+                  <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Edit Profile</a>
+                  <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Change Password</a>
+                  <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Logout</a>
+                </div>
+              </div>
+              <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+              
+    </header>
+
+        <div class="container mx-auto flex">
+            <!-- Filter panel -->
+            <div class="w-1/6 bg-white shadow-md p-4 mb-8 mr-4 mt-20">
+                <h2 class="text-xl font-bold mb-4">Subjects</h2>
+                <ul class="mb-4">
+                    <li><a href="#" class="text-blue-500">Chemistry</a></li>
+                    <li><a href="#" class="text-blue-500">Physics</a></li>
+                    <li><a href="#" class="text-blue-500">Maths</a></li>
+                </ul>
+                <hr>
+                <h2 class="text-xl font-bold mb-4">Classes</h2>
+                <ul>
+                    <li><a href="#" class="text-blue-500">Class 9th</a></li>
+                    <li><a href="#" class="text-blue-500">Class 10th</a></li>
+                    <li><a href="#" class="text-blue-500">Class 11th</a></li>
+                    <li><a href="#" class="text-blue-500">Class 12th</a></li>
+                </ul>
+            </div>
+
+        <div class="container mx-auto">
+            <div class="flex flex-col items-center">
+                <!-- Card 1: Class 9th -->
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 mt-4">
+                    <h2 class="text-xl font-bold">Class 12th</h2>
+                </div>
+
+                <!-- Card 2: Chemistry with image -->
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 flex items-center">
+                    <img src="./images/chemistry.webp" alt="Chemistry Image" class="w-16 h-16 mr-4">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-2">CHEMISTRY  Class 12</h2>
+                    </div>
+                </div>
+                
+                
+                <!-- Card 3: Chapter list with buttons -->
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                    <h3 class="text-xl font-bold mb-4">Chapter 1</h3>
+                    <table class="w-full">
+                        <tr>
+                            <td colspan="2">
+                                <a href="#" class="text-black-500">The Solid State</a>
+                            </td>
+                            <td class="text-right">
+                                <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter1')">Open</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <ul>
+                                    <li><p class="text-blue-500">General Characteristics of Solid State</p></li>
+                                    <li><p class="text-blue-500">Amorphous and Crystalline Solids</p></li>
+                                    <li><p class="text-blue-500">Classification of Crystalline Solids</p></li>
+                                    <li><p class="text-blue-500">Crystal Lattices and Unit Cells</p></li>
+                                    <li><p class="text-blue-500">Number of Atoms in a Unit Cell</p></li>
+                                    <li><p class="text-blue-500">Close Packed Structures</p></li>
+                                    <li><p class="text-blue-500">Packing Efficiency</p></li>
+                                    <li><p class="text-blue-500">Calculations Involving Unit Cell Dimensions</p></li>
+                                    <li><p class="text-blue-500">Imperfections in Solids</p></li>
+                                    <li><p class="text-blue-500">Electrical Properties</p></li>
+                                    <li><p class="text-blue-500">Magnetic Properties</p></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                    <h3 class="text-xl font-bold mb-4">Chapter 2</h3>
+                    <table class="w-full">
+                        <tr>
+                            <td colspan="2">
+                                <a href="#" class="text-black-500">Solutions</a>
+                            </td>
+                            <td class="text-right">
+                                <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter2')">Open</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <ul>
+                                    <li><p class="text-blue-500">Types of Solutions</p></li>
+                                    <li><p class="text-blue-500">Expressing Concentration of Solutions</p></li>
+                                    <li><p class="text-blue-500">Solubility</p></li>
+                                    <li><p class="text-blue-500">Vapour Pressure of Liquid Solutions</p></li>
+                                    <li><p class="text-blue-500">Ideal and Non-ideal Solutions</p></li>
+                                    <li><p class="text-blue-500">Colligative Properties and Determination of Molar Mass</p></li>
+                                    <li><p class="text-blue-500">Abnormal Molar Masses</p></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                    <h3 class="text-xl font-bold mb-4">Chapter 3</h3>
+                    <table class="w-full">
+                        <tr>
+                            <td colspan="2">
+                                <a href="#" class="text-black-500">Electrochemistry</a>
+                            </td>
+                            <td class="text-right">
+                                <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter3')">Open</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <ul>
+                                    <li><p class="text-blue-500">Electrochemical Cells</p></li>
+                                    <li><p class="text-blue-500">Galvanic Cells</p></li>
+                                    <li><p class="text-blue-500">Nernst Equation</p></li>
+                                    <li><p class="text-blue-500">Conductance of Electrolytic Solutions</p></li>
+                                    <li><p class="text-blue-500">Electrolytic Cells and Electrolysis</p></li>
+                                    <li><p class="text-blue-500">Batteries</p></li>
+                                    <li><p class="text-blue-500">Fuel Cells</p></li>
+                                    <li><p class="text-blue-500">Corrosion</p></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                    <h3 class="text-xl font-bold mb-4">Chapter 4</h3>
+                    <table class="w-full">
+                        <tr>
+                            <td colspan="2">
+                                <a href="#" class="text-black-500">Chemical Kinetics</a>
+                            </td>
+                            <td class="text-right">
+                                <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter4')">Open</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <ul>
+                                    <li><p class="text-blue-500">Rate of a Chemical Reaction</p></li>
+                                    <li><p class="text-blue-500">Factors Influencing Rate of a Reaction</p></li>
+                                    <li><p class="text-blue-500">Integrated Rate Equations</p></li>
+                                    <li><p class="text-blue-500">Temperature Dependence of the Rate of a Reaction</p></li>
+                                    <li><p class="text-blue-500">Collision Theory of Chemical Reactions</p></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                    <h3 class="text-xl font-bold mb-4">Chapter 5</h3>
+                    <table class="w-full">
+                        <tr>
+                            <td colspan="2">
+                                <a href="#" class="text-black-500">Surface Chemistry</a>
+                            </td>
+                            <td class="text-right">
+                                <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter5')">Open</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <ul>
+                                    <li><p class="text-blue-500">Adsorption</p></li>
+                                    <li><p class="text-blue-500">Catalysis</p></li>
+                                    <li><p class="text-blue-500">Colloids</p></li>
+                                    <li><p class="text-blue-500">Classification of Colloids</p></li>
+                                    <li><p class="text-blue-500">Emulsions</p></li>
+                                    <li><p class="text-blue-500">Colloids Around Us</p></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                    <h3 class="text-xl font-bold mb-4">Chapter 6</h3>
+                    <table class="w-full">
+                        <tr>
+                            <td colspan="2">
+                                <a href="#" class="text-black-500">General Principles and Processes of Isolation of Elements</a>
+                            </td>
+                            <td class="text-right">
+                                <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter6')">Open</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <ul>
+                                    <li><p class="text-blue-500">Occurrence of Metals</p></li>
+                                    <li><p class="text-blue-500">Concentration of Ores</p></li>
+                                    <li><p class="text-blue-500">Extraction of Crude Metal from Concentrated Ore</p></li>
+                                    <li><p class="text-blue-500">Thermodynamic Principles of Metallurgy</p></li>
+                                    <li><p class="text-blue-500">Electrochemical Principles of Metallurgy</p></li>
+                                    <li><p class="text-blue-500">Oxidation and Reduction</p></li>
+                                    <li><p class="text-blue-500">Refining</p></li>
+                                    <li><p class="text-blue-500">Uses of Aluminium, Copper, Zinc and Iron</p></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                    <h3 class="text-xl font-bold mb-4">Chapter 7</h3>
+                    <table class="w-full">
+                        <tr>
+                            <td colspan="2">
+                                <a href="#" class="text-black-500">The p-Block Elements</a>
+                            </td>
+                            <td class="text-right">
+                                <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter7')">Open</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <ul>
+                                    <li><p class="text-blue-500">Group 15 Elements</p></li>
+                                    <li><p class="text-blue-500">Dinitrogen</p></li>
+                                    <li><p class="text-blue-500">Ammonia</p></li>
+                                    <li><p class="text-blue-500">Oxides of Nitrogen</p></li>
+                                    <li><p class="text-blue-500">Nitric Acid</p></li>
+                                    <li><p class="text-blue-500">Phosphorus - Allotropic Forms</p></li>
+                                    <li><p class="text-blue-500">Phosphine</p></li>
+                                    <li><p class="text-blue-500">Phosphorus Halides</p></li>
+                                    <li><p class="text-blue-500">Oxoacids of Phosphorus</p></li>
+                                    <li><p class="text-blue-500">Group 16 Elements</p></li>
+                                    <li><p class="text-blue-500">Dioxygen</p></li>
+                                    <li><p class="text-blue-500">Simple Oxides</p></li>
+                                    <li><p class="text-blue-500">Ozone</p></li>
+                                    <li><p class="text-blue-500">Sulphur - Allotropic Forms</p></li>
+                                    <li><p class="text-blue-500">Sulphur Dioxide</p></li>
+                                    <li><p class="text-blue-500">Oxoacids of Sulphur</p></li>
+                                    <li><p class="text-blue-500">Sulphuric Acid</p></li>
+                                    <li><p class="text-blue-500">Group 17 Elements</p></li>
+                                    <li><p class="text-blue-500">Chlorine</p></li>
+                                    <li><p class="text-blue-500">Hydrogen Chloride</p></li>
+                                    <li><p class="text-blue-500">Oxoacids of Halogens</p></li>
+                                    <li><p class="text-blue-500">Interhalogen Compounds</p></li>
+                                    <li><p class="text-blue-500">Group 18 Elements</p></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                    <h3 class="text-xl font-bold mb-4">Chapter 8</h3>
+                    <table class="w-full">
+                        <tr>
+                            <td colspan="2">
+                                <a href="#" class="text-black-500">The d-and f-Block Elements</a>
+                            </td>
+                            <td class="text-right">
+                                <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter8')">Open</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <ul>
+                                    <li><p class="text-blue-500">Position in the Periodic Table</p></li>
+                                    <li><p class="text-blue-500">Electronic Configurations of the d-Block Elements</p></li>
+                                    <li><p class="text-blue-500">General Properties of the Transition Elements (d-Block)</p></li>
+                                    <li><p class="text-blue-500">Some Important Compounds of Transition Elements</p></li>
+                                    <li><p class="text-blue-500">The Lanthanoids</p></li>
+                                    <li><p class="text-blue-500">The Actinoids</p></li>
+                                    <li><p class="text-blue-500">Some Applications of d- and f-Block Elements</p></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                    <h3 class="text-xl font-bold mb-4">Chapter 9</h3>
+                    <table class="w-full">
+                        <tr>
+                            <td colspan="2">
+                                <a href="#" class="text-black-500">Coordination Compounds</a>
+                            </td>
+                            <td class="text-right">
+                                <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter9')">Open</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <ul>
+                                    <li><p class="text-blue-500">Werner's Theory of Coordination Compounds</p></li>
+                                    <li><p class="text-blue-500">Definitions of Some Important Terms Pertaining to Coordination Compounds</p></li>
+                                    <li><p class="text-blue-500">Nomenclature of Coordination Compounds</p></li>
+                                    <li><p class="text-blue-500">Isomerism in Coordination Compounds</p></li>
+                                    <li><p class="text-blue-500">Bonding in Coordination Compounds</p></li>
+                                    <li><p class="text-blue-500">Bonding in Metal Carbonyls</p></li>
+                                    <li><p class="text-blue-500">Importance and Applications of Coordination Compounds</p></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                    <h3 class="text-xl font-bold mb-4">Chapter 10</h3>
+                    <table class="w-full">
+                        <tr>
+                            <td colspan="2">
+                                <a href="#" class="text-black-500">Haloalkanes and Haloarenes</a>
+                            </td>
+                            <td class="text-right">
+                                <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter10')">Open</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <ul>
+                                    <li><p class="text-blue-500">Classification</p></li>
+                                    <li><p class="text-blue-500">Nomenclature</p></li>
+                                    <li><p class="text-blue-500">Nature of C-X Bond</p></li>
+                                    <li><p class="text-blue-500">Methods of Preparation of Haloalkanes</p></li>
+                                    <li><p class="text-blue-500">Preparation of Haloarenes</p></li>
+                                    <li><p class="text-blue-500">Physical Properties</p></li>
+                                    <li><p class="text-blue-500">Chemical Reactions</p></li>
+                                    <li><p class="text-blue-500">Polyhalogen Compounds</p></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                    <h3 class="text-xl font-bold mb-4">Chapter 11</h3>
+                    <table class="w-full">
+                        <tr>
+                            <td colspan="2">
+                                <a href="#" class="text-black-500">Alcohols, Phenols and Ethers</a>
+                            </td>
+                            <td class="text-right">
+                                <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter11')">Open</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <ul>
+                                    <li><p class="text-blue-500">Classification</p></li>
+                                    <li><p class="text-blue-500">Nomenclature</p></li>
+                                    <li><p class="text-blue-500">Structures of Functional Groups</p></li>
+                                    <li><p class="text-blue-500">Alcohols and Phenols</p></li>
+                                    <li><p class="text-blue-500">Some Commercially Important Alcohols</p></li>
+                                    <li><p class="text-blue-500">Ethers</p></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                    <h3 class="text-xl font-bold mb-4">Chapter 12</h3>
+                    <table class="w-full">
+                        <tr>
+                            <td colspan="2">
+                                <a href="#" class="text-black-500">Aldehydes, Ketones and Carboxylic Acids</a>
+                            </td>
+                            <td class="text-right">
+                                <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter12')">Open</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <ul>
+                                    <li><p class="text-blue-500">Nomenclature and Structure of Carbonyl Group</p></li>
+                                    <li><p class="text-blue-500">Preparation of Aldehydes and Ketones</p></li>
+                                    <li><p class="text-blue-500">Physical Properties</p></li>
+                                    <li><p class="text-blue-500">Chemical Reactions</p></li>
+                                    <li><p class="text-blue-500">Uses of Aldehydes and Ketones</p></li>
+                                    <li><p class="text-blue-500">Nomenclature and Structure of Carboxyl Group</p></li>
+                                    <li><p class="text-blue-500">Methods of Preparation of Carboxylic Acids</p></li>
+                                    <li><p class="text-blue-500">Physical Properties</p></li>
+                                    <li><p class="text-blue-500">Chemical Reactions</p></li>
+                                    <li><p class="text-blue-500">Uses of Carboxylic Acids</p></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                    <h3 class="text-xl font-bold mb-4">Chapter 13</h3>
+                    <table class="w-full">
+                        <tr>
+                            <td colspan="2">
+                                <a href="#" class="text-black-500">Amines</a>
+                            </td>
+                            <td class="text-right">
+                                <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter13')">Open</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <ul>
+                                    <li><p class="text-blue-500">Structure of Amines</p></li>
+                                    <li><p class="text-blue-500">Classification</p></li>
+                                    <li><p class="text-blue-500">Nomenclature</p></li>
+                                    <li><p class="text-blue-500">Preparation of Amines</p></li>
+                                    <li><p class="text-blue-500">Physical Properties</p></li>
+                                    <li><p class="text-blue-500">Chemical Reactions</p></li>
+                                    <li><p class="text-blue-500">Method of Preparation of Diazonium Salts</p></li>
+                                    <li><p class="text-blue-500">Physical Properties</p></li>
+                                    <li><p class="text-blue-500">Chemical Reactions</p></li>
+                                    <li><p class="text-blue-500">Importance of Diazonium Salts in the Synthesis of Aromatic Compounds</p></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                    <h3 class="text-xl font-bold mb-4">Chapter 14</h3>
+                    <table class="w-full">
+                        <tr>
+                            <td colspan="2">
+                                <a href="#" class="text-black-500">Biomolecules</a>
+                            </td>
+                            <td class="text-right">
+                                <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter14')">Open</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <ul>
+                                    <li><p class="text-blue-500">Carbohydrates</p></li>
+                                    <li><p class="text-blue-500">Proteins</p></li>
+                                    <li><p class="text-blue-500">Enzymes</p></li>
+                                    <li><p class="text-blue-500">Vitamins</p></li>
+                                    <li><p class="text-blue-500">Nucleic Acids</p></li>
+                                    <li><p class="text-blue-500">Hormones</p></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                    <h3 class="text-xl font-bold mb-4">Chapter 15</h3>
+                    <table class="w-full">
+                        <tr>
+                            <td colspan="2">
+                                <a href="#" class="text-black-500">Polymers</a>
+                            </td>
+                            <td class="text-right">
+                                <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter15')">Open</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <ul>
+                                    <li><p class="text-blue-500">Classification of Polymers</p></li>
+                                    <li><p class="text-blue-500">Types of Polymerisation Reactions</p></li>
+                                    <li><p class="text-blue-500">Molecular Mass of Polymers</p></li>
+                                    <li><p class="text-blue-500">Biodegradable Polymers</p></li>
+                                    <li><p class="text-blue-500">Polymers of Commercial Importance</p></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                    <h3 class="text-xl font-bold mb-4">Chapter 16</h3>
+                    <table class="w-full">
+                        <tr>
+                            <td colspan="2">
+                                <a href="#" class="text-black-500">Chemistry in Everyday Life</a>
+                            </td>
+                            <td class="text-right">
+                                <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter16')">Open</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <ul>
+                                    <li><p class="text-blue-500">Drugs and their Classification</p></li>
+                                    <li><p class="text-blue-500">Drug-Target Interaction</p></li>
+                                    <li><p class="text-blue-500">Therapeutic Action of Different Classes of Drugs</p></li>
+                                    <li><p class="text-blue-500">Chemicals in Food</p></li>
+                                    <li><p class="text-blue-500">Cleansing Agents</p></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+               
+                <div>
+                    <iframe id="chapter1Video" width="700" height="393.75" src="https://www.youtube.com/embed/CMwGopvmGo8?si=kgb3H_zoiEhx_WSz" title="Chapter 1 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none;"></iframe>
+                    <iframe id="chapter2Video" width="700" height="393.75" src="https://www.youtube.com/embed/PGVK2K2yX1Q?si=euCFLdrkIr9TMmtW" title="Chapter 2 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                    <iframe id="chapter3Video" width="700" height="393.75" src="https://www.youtube.com/embed/pQ1k4N1-pyQ?si=cQcsXhvl39DcL-zT" title="Chapter 3 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                    <iframe id="chapter4Video" width="700" height="393.75" src="https://www.youtube.com/embed/c5GeysyRw2A?si=PWpQt7bu1R4Pd-CM" title="Chapter 4 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                    <iframe id="chapter5Video" width="700" height="393.75" src="https://www.youtube.com/embed/jWj-tVp7J9o?si=rVwkWP7EZiaTP071" title="Chapter 5 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                    <iframe id="chapter6Video" width="700" height="393.75" src="https://www.youtube.com/embed/MEI1aZwm7Vs?si=Iz_YNoDjiiLKBKlx" title="Chapter 6 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                    <iframe id="chapter7Video" width="700" height="393.75" src="https://www.youtube.com/embed/xQJOfAKgSOY?si=012QzQcAS5ogf1l9" title="Chapter 7 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                    <iframe id="chapter8Video" width="700" height="393.75" src="https://www.youtube.com/embed/fVVJVlnSmn0?si=P5yirqsXcv5Ht3tj" title="Chapter 8 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                    <iframe id="chapter9Video" width="700" height="393.75" src="https://www.youtube.com/embed/PpuPUMfr91Y?si=5kBWQW-mSmnhnjIl" title="Chapter 9 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                    <iframe id="chapter10Video" width="700" height="393.75" src="https://www.youtube.com/embed/nOamHFEWIs0?si=BgNiputbNTyXGGY6" title="Chapter 10 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                    <iframe id="chapter11Video" width="700" height="393.75" src="https://www.youtube.com/embed/VM2xAehlxo4?si=dnHd719y894IAIfX" title="Chapter 11 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                    <iframe id="chapter12Video" width="700" height="393.75" src="https://www.youtube.com/embed/L5kC6O5256c?si=iOZKaqARRT1Vi9jH" title="Chapter 12 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                    <iframe id="chapter13Video" width="700" height="393.75" src="https://www.youtube.com/embed/X41GKSteurg?si=QPJ6HcmkfmMsn_M0" title="Chapter 13 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                    <iframe id="chapter14Video" width="700" height="393.75" src="https://www.youtube.com/embed/H7kPFFy8iyk?si=5T_Bs_m1tdJYAsgG" title="Chapter 14 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                    <iframe id="chapter15Video" width="700" height="393.75" src="https://www.youtube.com/embed/BC1nk4x5BlQ?si=Lmyil_CiabaYXnLb" title="Chapter 15 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                    <iframe id="chapter16Video" width="700" height="393.75" src="https://www.youtube.com/embed/DfB6JQ8weHc?si=BvAXBqJ9Rbe57qa_" title="Chapter 16 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+
+                </div>
+                
+                <button id="backButton" class="text-blue-500" style="display: none; border: 1px solid black; padding: 10px; margin-top: 1rem; margin-bottom:1rem;" onclick="hideVideo()">Back</button>
+            </div>
+            <footer class="w-full bg-gray-200 py-4 px-6 bottom-0 left-0 right-0">
+                <div class="container mx-auto flex justify-between">
+                    <div>
+                        <h2 class="text-xl font-bold mb-2 ">Contact Details</h2>
+                        <p class="text-gray-600">Phone: +91-98765-43210</p>
+                        <p class="text-gray-600">Email: learnquest@gmail.com</p>
+                    </div>
+        
+                    <div>
+                        <h2 class="text-xl font-bold mb-2">Classes</h2>
+                        <ul>
+                            <li><a href="#" class="text-blue-500">Class 9th</a></li>
+                            <li><a href="#" class="text-blue-500">Class 10th</a></li>
+                            <li><a href="#" class="text-blue-500">Class 11th</a></li>
+                            <li><a href="#" class="text-blue-500">Class 12th</a></li>
+                        </ul>
+                    </div>
+        
+                    <div class="">
+                        <h2 class="text-xl font-bold mb-2 ">Subjects</h2>
+                        <ul>
+                            <li><a href="#" class="text-blue-500">Physics</a></li>
+                            <li><a href="#" class="text-blue-500">Chemistry</a></li>
+                            <li><a href="#" class="text-blue-500">Mathematics</a></li>
+                        </ul>
+                    </div>
+                </div>
+                </footer>
+       
+        </div>
+    
+
+
+
+        <script>
+            const navLinks = document.querySelector('.nav-links')
+            function onToggleMenu(e){
+                e.name = e.name === 'menu' ? 'close' : 'menu'
+                navLinks.classList.toggle('top-[9%]')
+            }
+    
+            // JavaScript to toggle the visibility of the dropdown content
+            document.querySelectorAll('.bg-blue-500').forEach(button => {
+                button.addEventListener('click', function () {
+                    const dropdownContent = this.nextElementSibling;
+                    dropdownContent.classList.toggle('hidden');
+                });
+            });
+
+            function playVideo(chapter) {
+                var cards = document.querySelectorAll('.toHide');
+                for (var i = 0; i < cards.length; i++) {
+                    cards[i].style.display = 'none';
+                }
+        
+                document.getElementById(chapter + 'Video').style.display = 'block';
+                document.getElementById('backButton').style.display = 'block';
+            }
+
+            function hideVideo() {
+                var videos = document.querySelectorAll('iframe');
+                for (var i = 0; i < videos.length; i++) {
+                    videos[i].style.display = 'none';
+                }
+
+                var cards = document.querySelectorAll('.toHide');
+                for (var i = 0; i < cards.length; i++) {
+                    cards[i].style.display = 'block';
+                }
+
+                document.getElementById('backButton').style.display = 'none';
+            }
+        </script>
+</body>
+
+
+</html>
