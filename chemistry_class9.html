@@ -12,11 +12,11 @@
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </head>
 
-<body class="font-[Poppins] bg-gradient-to-t from-[#7ebc95] to-[#becce5] h-screen">
-    <header class="bg-white">
-        <nav class="flex justify-between items-center w-[92%]  mx-auto">
+<body class="font-[Poppins] bg-gradient-to-t from-[#7ebc95] to-[#becce5] v-screen">
+    <header class="bg-white fixed top-0 left-0 right-0 z-50">
+        <nav class="flex justify-between items-center w-[92%]  mx-auto px-5 py-5">
             <div>
-                <img class="w-16 cursor-pointer" src="./images/LearnQuestLogo.png" alt="...">
+                <img class="w-40 cursor-pointer" src="./images/Logo.png" alt="...">
             </div>
             <div
                 class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
@@ -46,7 +46,7 @@
 
     <div class="container mx-auto flex">
         <!-- Filter panel -->
-        <div class="w-1/6 bg-white shadow-md p-4 mb-8 mr-4">
+        <div class="w-1/6 bg-white shadow-md p-4 mb-8 mr-4 ">
             <h2 class="text-xl font-bold mb-4">Subjects</h2>
             <ul class="mb-4">
                 <li><a href="#" class="text-blue-500">Chemistry</a></li>
@@ -66,67 +66,65 @@
     <div class="container mx-auto">
         <div class="flex flex-col items-center">
             <!-- Card 1: Class 9th -->
-            <div class="bg-white rounded-lg shadow-md p-4 mb-8 mt-4">
+            <div class="bg-white rounded-lg shadow-md p-4 mb-8 mt-4 flex items-centre ">
                 <h2 class="text-xl font-bold">Class 9th</h2>
             </div>
 
             <!-- Card 2: Chemistry with image -->
-            <div class="w-1/3 bg-white rounded-lg shadow-md p-4 mb-8 flex items-center">
+            <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 flex items-center ">
                 <img src="./images/chemistry.webp" alt="Chemistry Image" class="w-16 h-16 mr-4">
                 <div>
-                    <h2 class="text-3xl font-bold mb-2">CHEMISTRY</h2>
+                    <h2 class="text-3xl font-bold mb-2">CHEMISTRY Class 9</h2>
                     <!-- Add any additional text or elements here -->
                 </div>
             </div>
             
             
             <!-- Card 3: Chapter list with buttons -->
-            <div class=" w-1/3 bg-white rounded-lg shadow-md p-4 mb-8 ">
+            <div class=" w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
                 <h3 class="text-xl font-bold mb-4">Chapter 1</h3>
-                <table class="w-full">
-                    
-                        
+                <table class="w-full">  
                     <tr>
                         <td colspan="2">
-                            <a href="chapter1.html" class="text-black-500">Matter in Our Surroundings</a>
+                            <a href="#" class="text-black-500">Matter in Our Surroundings</a>
                         </td>
                         <td class="text-right">
-                            <a href="chapter1.html" class="text-blue-500">Open</a>
+                            <a href="javascript:void(0)" class="text-blue-500" onclick="playVideo('chapter1')">Open</a>
                         </td>
                     </tr>
                     <tr>
                         <td colspan="3">
                             <ul>
-                                <li><a href="subtopic1.html" class="text-blue-500">Characteristics of Particles of Matter</a></li>
-                                <li><a href="subtopic2.html" class="text-blue-500">States of Matter</a></li>
-                                <li><a href="subtopic3.html" class="text-blue-500">Evaporation</a></li>
-
-                                <!-- Add more sub-topics here -->
+                                <li><p class="text-blue-500">Characteristics of Particles of Matter</p></li>
+                                <li><p class="text-blue-500">States of Matter</p></li>
+                                <li><p class="text-blue-500">Evaporation</p></li>
                             </ul>
                         </td>
                     </tr>
                 </table>
             </div>
                         
-                 
-            <div class="w-1/3 bg-white rounded-lg shadow-md p-4 mb-8">
+             
+             
+            
+             <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
                 <h3 class="text-xl font-bold mb-4">Chapter 2</h3>
                 <table class="w-full">
                     <tr>
                         <td colspan="2">
-                            <a href="chapter2.html" class="text-black-500">Is Matter Around Us Pure?</a>
+                            <a href="#" class="text-black-500">Is Matter Around Us Pure?</a>
                         </td>
                         <td class="text-right">
-                            <a href="chapter2.html" class="text-blue-500">Open</a>
+                            <a href="javascript:void(0);" class="text-blue-500 " onclick="playVideo('chapter2')">Open</a>
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="3">
+                        <td colspan="2">
                             <ul>
-                                <li><a href="subtopic1.html" class="text-blue-500">What is a Mixture?</a></li>
-                                <li><a href="subtopic2.html" class="text-blue-500">What is a Solution?</a></li>
-                                <li><a href="subtopic3.html" class="text-blue-500">Separating the Components of a Mixture</a></li>
-                                <li><a href="subtopic4.html" class="text-blue-500">Physical and Chemical Changes</a></li>
+                                <li><p class="text-blue-500">What is a Mixture?</p></li>
+                                <li><p class="text-blue-500">What is a Solution?</p></li>
+                                <li><p class="text-blue-500">Separating the Components of a Mixture</p></li>
+                                <li><p class="text-blue-500">Physical and Chemical Changes</p></li>
                             </ul>
                         </td>
                     </tr>
@@ -134,58 +132,137 @@
             </div>
 
 
+
             
-            <div class="w-1/3 bg-white rounded-lg shadow-md p-4 mb-8">
+            <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
                 <h3 class="text-xl font-bold mb-4">Chapter 3</h3>
                 <table class="w-full">
                     <tr>
                         <td colspan="2">
-                            <a href="chapter3.html" class="text-black-500">Atoms and Molecules</a>
+                            <a href="#" class="text-black-500">Atoms and Molecules</a>
                         </td>
                         <td class="text-right">
-                            <a href="chapter3.html" class="text-blue-500">Open</a>
+                            <a href="javascript:void(0);" class="text-blue-500" onclick="playVideo('chapter3')">Open</a>
                         </td>
                     </tr>
                     <tr>
                         <td colspan="3">
                             <ul>
-                                <li><a href="subtopic1.html" class="text-blue-500">Laws of Chemical Combination</a></li>
-                                <li><a href="subtopic2.html" class="text-blue-500">What is an Atom? What is a Molecule?</a></li>
-                                <li><a href="subtopic3.html" class="text-blue-500">Mole Concept</a></li>
+                                <li><p class="text-blue-500">Laws of Chemical Combination</p></li>
+                                <li><p class="text-blue-500">What is an Atom? What is a Molecule?</p></li>
+                                <li><p class="text-blue-500">Mole Concept</p></li>
                             </ul>
                         </td>
                     </tr>
                 </table>
             </div>
+            
 
-                    
-
-            <div class="w-1/3 bg-white rounded-lg shadow-md p-4 mb-8">
+            <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
                 <h3 class="text-xl font-bold mb-4">Chapter 4</h3>
                 <table class="w-full">
                     <tr>
                         <td colspan="2">
-                            <a href="chapter4.html" class="text-black-500">Structure of the Atom</a>
+                            <a href="#" class="text-black-500">Structure of the Atom</a>
                         </td>
                         <td class="text-right">
-                            <a href="chapter4.html" class="text-blue-500">Open</a>
+                            <a href="javascript:void(0);" class="text-blue-500" onclick="playVideo('chapter4')">Open</a>
                         </td>
                     </tr>
                     <tr>
                         <td colspan="3">
                             <ul>
-                                <li><a href="subtopic1.html" class="text-blue-500">Thomson's Atomic Model</a></li>
-                                <li><a href="subtopic2.html" class="text-blue-500">Rutherford's Atomic Model</a></li>
-                                <li><a href="subtopic3.html" class="text-blue-500">Bohr's Atomic Model</a></li>
-                                <li><a href="subtopic4.html" class="text-blue-500">Valency</a></li>
-                                <li><a href="subtopic5.html" class="text-blue-500">Atomic Number and Mass Number</a></li>
-                                <li><a href="subtopic6.html" class="text-blue-500">Isotopes</a></li>
+                                <li><p class="text-blue-500">Thomson's Atomic Model</p></li>
+                                <li><p class="text-blue-500">Rutherford's Atomic Model</p></li>
+                                <li><p class="text-blue-500">Bohr's Atomic Model</p></li>
+                                <li><p class="text-blue-500">Valency</p></li>
+                                <li><p class="text-blue-500">Atomic Number and Mass Number</p></li>
+                                <li><p class="text-blue-500">Isotopes</p></li>
                             </ul>
                         </td>
                     </tr>
                 </table>
             </div>
+            
+            <div>
+                <iframe id="chapter1Video" width="700" height="393.75" src="https://www.youtube.com/embed/vawU6R8MaO0?si=rtdqdet6Ca6vE57t" title="Chapter 1 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none;"></iframe>
+                <iframe id="chapter2Video" width="700" height="393.75" src="https://www.youtube.com/embed/K7X2m-E-Iq0?si=WS-4D5EHywmXSCjV" title="Chapter 2 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                <iframe id="chapter3Video" width="700" height="393.75" src="https://www.youtube.com/embed/mlkO8Oj3EvI?si=dKMcBiNN_Cau4VeK" title="Chapter 3 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+                <iframe id="chapter4Video" width="700" height="393.75" src="https://www.youtube.com/embed/g8EgBvENBr4?si=L9h83OaSk5aUpBlS" title="Chapter 4 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none"></iframe>
+            </div>
+            
+            <button id="backButton" class="text-blue-500" style="display: none; border: 1px solid black; padding: 10px; margin-top: 1rem; margin-bottom:1rem;" onclick="hideVideo()">Back</button>
+            </div>
+
+            <footer class="w-full bg-gray-200 py-4 px-6 bottom-0 left-0 right-0">
+                <div class="container mx-auto flex justify-between">
+                    <div>
+                        <h2 class="text-xl font-bold mb-2 ">Contact Details</h2>
+                        <p class="text-gray-600">Phone: +91-98765-43210</p>
+                        <p class="text-gray-600">Email: learnquest@gmail.com</p>
+                    </div>
+        
+                    <div>
+                        <h2 class="text-xl font-bold mb-2">Classes</h2>
+                        <ul>
+                            <li><a href="#" class="text-blue-500">Class 9th</a></li>
+                            <li><a href="#" class="text-blue-500">Class 10th</a></li>
+                            <li><a href="#" class="text-blue-500">Class 11th</a></li>
+                            <li><a href="#" class="text-blue-500">Class 12th</a></li>
+                        </ul>
+                    </div>
+        
+                    <div class="">
+                        <h2 class="text-xl font-bold mb-2 ">Subjects</h2>
+                        <ul>
+                            <li><a href="#" class="text-blue-500">Physics</a></li>
+                            <li><a href="#" class="text-blue-500">Chemistry</a></li>
+                            <li><a href="#" class="text-blue-500">Mathematics</a></li>
+                        </ul>
+                    </div>
+                </div>
+                </footer>
         </div>
-        </div>
+
+        
+        <script>
+            const navLinks = document.querySelector('.nav-links')
+            function onToggleMenu(e){
+                e.name = e.name === 'menu' ? 'close' : 'menu'
+                navLinks.classList.toggle('top-[9%]')
+            }
+    
+            // JavaScript to toggle the visibility of the dropdown content
+            document.querySelectorAll('.bg-blue-500').forEach(button => {
+                button.addEventListener('click', function () {
+                    const dropdownContent = this.nextElementSibling;
+                    dropdownContent.classList.toggle('hidden');
+                });
+            });
+            
+            function playVideo(chapter) {
+                var cards = document.querySelectorAll('.toHide');
+                for (var i = 0; i < cards.length; i++) {
+                    cards[i].style.display = 'none';
+                }
+        
+                document.getElementById(chapter + 'Video').style.display = 'block';
+                document.getElementById('backButton').style.display = 'block';
+            }
+
+            function hideVideo() {
+                var videos = document.querySelectorAll('iframe');
+                for (var i = 0; i < videos.length; i++) {
+                    videos[i].style.display = 'none';
+                }
+
+                var cards = document.querySelectorAll('.toHide');
+                for (var i = 0; i < cards.length; i++) {
+                    cards[i].style.display = 'block';
+                }
+
+                document.getElementById('backButton').style.display = 'none';
+            }
+        </script>
 </body>
 </html>

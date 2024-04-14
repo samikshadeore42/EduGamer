@@ -12,11 +12,11 @@
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </head>
 
-<body class="font-[Poppins] bg-gradient-to-t from-[#7ebc95] to-[#becce5] h-screen">
-    <header class="bg-white">
-        <nav class="flex justify-between items-center w-[92%]  mx-auto">
+<body class="font-[Poppins] bg-gradient-to-t from-[#7ebc95] to-[#becce5] v-screen">
+    <header class="bg-white fixed top-0 left-0 right-0 z-50">
+        <nav class="flex justify-between items-center w-[92%]  mx-auto px-5 py-5">
             <div>
-                <img class="w-16 cursor-pointer" src="./images/LearnQuestLogo.png" alt="...">
+                <img class="w-40 cursor-pointer" src="./images/Logo.png" alt="...">
             </div>
             <div
                 class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
@@ -38,13 +38,355 @@
                     </li>
                 </ul>
             </div>
-            <div class="flex items-center gap-6">
-                <button class="bg-[#a6c1ee] text-white px-5 py-2 hover:bg-[#87acec]">My Profile</button>
-                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
-            </div>
+            <div class="relative inline-block">
+                <button id="profileBtn" class="bg-[#a6c1ee] text-white px-5 py-2 hover:bg-[#87acec]">My Profile</button>
+                <div id="profileDropdown" class="hidden absolute right-0 mt-2 py-2 w-48 bg-white border rounded-lg shadow-lg z-10">
+                  <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Edit Profile</a>
+                  <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Change Password</a>
+                  <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Logout</a>
+                </div>
+              </div>
+              <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+              
     </header>
 
+        <div class="container mx-auto flex">
+            <!-- Filter panel -->
+            <div class="w-1/6 bg-white shadow-md p-4 mb-8 mr-4 mt-20">
+                <h2 class="text-xl font-bold mb-4">Subjects</h2>
+                <ul class="mb-4">
+                    <li><a href="#" class="text-blue-500">Chemistry</a></li>
+                    <li><a href="#" class="text-blue-500">Physics</a></li>
+                    <li><a href="#" class="text-blue-500">Maths</a></li>
+                </ul>
+                <hr>
+                <h2 class="text-xl font-bold mb-4">Classes</h2>
+                <ul>
+                    <li><a href="#" class="text-blue-500">Class 9th</a></li>
+                    <li><a href="#" class="text-blue-500">Class 10th</a></li>
+                    <li><a href="#" class="text-blue-500">Class 11th</a></li>
+                    <li><a href="#" class="text-blue-500">Class 12th</a></li>
+                </ul>
+            </div>
+
+        <div class="container mx-auto">
+            <div class="flex flex-col items-center">
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 mt-22">
+                    <h2 class="text-xl font-bold">Class 11th</h2>
+                </div>
+
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 flex items-center">
+                    <img src="./images/chemistry.webp" alt="Chemistry Image" class="w-16 h-16 mr-4">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-2">CHEMISTRY Class 11</h2>
+                    </div>
+                </div>
+                
+                
+                <!-- Chapter list with buttons -->
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8 toHide">
+                    <h3 class="text-xl font-bold mb-4">Chapter 1</h3>
+                    <table class="w-full">
+                        <tr>
+                            <td colspan="2">
+                                <a href="chapter1.html" class="text-black-500">Some Basic Concepts Of Chemistry</a>
+                            </td>
+                            <td class="text-right">
+                                <a href="chapter1.html" class="text-blue-500">Open</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <ul>
+                                    <li><p class="text-blue-500">Laws of chemical combination</p></li>
+                                    <li><p class="text-blue-500">Importance and scope of Chemistry</p></li>
+                                    <li><p class="text-blue-500">Dalton's atomic theory</p></li>
+                                    <li><p class="text-blue-500">Atoms and molecules</p></li>
+                                    <li><p class="text-blue-500">Atomic and molecular masses</p></li>
+                                    <li><p class="text-blue-500">Mole concept</p></li>
+                                    <li><p class="text-blue-500">Molar mass</p></li>
+                                    <li><p class="text-blue-500">Percentage composition</p></li>
+                                    <li><p class="text-blue-500">Chemical reactions</p></li>
+                                    <li><p class="text-blue-500">Stoichiometry</p></li>
+                                    <li><p class="text-blue-500">Calculations based on stoichiometry</p></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                            
+                    
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8">
+                    <h3 class="text-xl font-bold mb-4">Chapter 2</h3>
+                    <table class="w-full">
+                        <tr>
+                            <td colspan="2">
+                                <a href="structure_of_atom.html" class="text-black-500">Structure of Atom</a>
+                            </td>
+                            <td class="text-right">
+                                <a href="structure_of_atom.html" class="text-blue-500">Open</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <ul>
+                                    <li><a href="subtopic1.html" class="text-blue-500">Discovery of Electron</a></li>
+                                    <li><a href="subtopic2.html" class="text-blue-500">Proton and Neutron</a></li>
+                                    <li><a href="subtopic3.html" class="text-blue-500">Atomic Number</a></li>
+                                    <li><a href="subtopic4.html" class="text-blue-500">Isotopes and Isobars</a></li>
+                                    <li><a href="subtopic5.html" class="text-blue-500">Thomson’s Model and its Limitations</a></li>
+                                    <li><a href="subtopic6.html" class="text-blue-500">Rutherford’s Model and its Limitations</a></li>
+                                    <li><a href="subtopic7.html" class="text-blue-500">Bohr’s Model and its Limitations</a></li>
+                                    <li><a href="subtopic8.html" class="text-blue-500">de Broglie’s Relationship</a></li>
+                                    <li><a href="subtopic9.html" class="text-blue-500">Heisenberg Uncertainty Principle</a></li>
+                                    <li><a href="subtopic10.html" class="text-blue-500">Concept of Orbitals</a></li>
+                                    <li><a href="subtopic11.html" class="text-blue-500">Quantum Numbers</a></li>
+                                    <li><a href="subtopic12.html" class="text-blue-500">Shapes of s, p and d Orbitals</a></li>
+                                    <li><a href="subtopic13.html" class="text-blue-500">Rules for Filling Electrons in Orbitals</a></li>
+                                    <li><a href="subtopic14.html" class="text-blue-500">Aufbau Principle</a></li>
+                                    <li><a href="subtopic15.html" class="text-blue-500">Pauli’s Exclusion Principle</a></li>
+                                    <li><a href="subtopic16.html" class="text-blue-500">Hund’s Rule</a></li>
+                                    <li><a href="subtopic17.html" class="text-blue-500">Electronic Configuration of Atoms</a></li>
+                                    <li><a href="subtopic18.html" class="text-blue-500">Stability of Half-filled and Completely Filled Orbitals</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+
+
+                
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8">
+                    <h3 class="text-xl font-bold mb-4">Chapter 3 </h3>
+                    <table class="w-full">
+                        <tr>
+                            <td colspan="2">
+                                <a href="chapter3.html" class="text-black-500">Periodic Table</a>
+                            </td>
+                            <td class="text-right">
+                                <a href="chapter3.html" class="text-blue-500">Open</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <ul>
+                                    <li><a href="subtopic1.html" class="text-blue-500">Modern Periodic Law and the Present Form of Periodic Table</a></li>
+                                    <li><a href="subtopic2.html" class="text-blue-500">Periodic Trends in Properties of Elements</a></li>
+                                    <li><a href="subtopic3.html" class="text-blue-500">Atomic Radii</a></li>
+                                    <li><a href="subtopic4.html" class="text-blue-500">Ionic Radii</a></li>
+                                    <li><a href="subtopic5.html" class="text-blue-500">Inert Gas Radii</a></li>
+                                    <li><a href="subtopic6.html" class="text-blue-500">Ionization Enthalpy</a></li>
+                                    <li><a href="subtopic7.html" class="text-blue-500">Electron Gain Enthalpy</a></li>
+                                    <li><a href="subtopic8.html" class="text-blue-500">Electronegativity</a></li>
+                                    <li><a href="subtopic9.html" class="text-blue-500">Valency</a></li>
+                                    <li><a href="subtopic10.html" class="text-blue-500">Nomenclature of Elements with Atomic Number Greater than 100</a></li>
+                                    <!-- Add more sub-topics here -->
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+
+                        
+
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8">
+                    <h3 class="text-xl font-bold mb-4">Chapter 4</h3>
+                    <table class="w-full">
+                        <tr>
+                            <td colspan="2">
+                                <a href="chapter4.html" class="text-black-500">Chemical Bonding And Molecular Structure</a>
+                            </td>
+                            <td class="text-right">
+                                <a href="chapter4.html" class="text-blue-500">Open</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <ul>
+                                    <li><a href="subtopic1.html" class="text-blue-500">Valence electrons</a></li>
+                                    <li><a href="subtopic2.html" class="text-blue-500">Ionic bond</a></li>
+                                    <li><a href="subtopic3.html" class="text-blue-500">Covalent bond</a></li>
+                                    <li><a href="subtopic4.html" class="text-blue-500">Bond parameters</a></li>
+                                    <li><a href="subtopic5.html" class="text-blue-500">Lewis structure</a></li>
+                                    <li><a href="subtopic6.html" class="text-blue-500">Polar character of covalent bond</a></li>
+                                    <li><a href="subtopic7.html" class="text-blue-500">Covalent character of ionic bond</a></li>
+                                    <li><a href="subtopic8.html" class="text-blue-500">Valence bond theory</a></li>
+                                    <li><a href="subtopic9.html" class="text-blue-500">Resonance</a></li>
+                                    <li><a href="subtopic10.html" class="text-blue-500">Geometry of covalent molecules</a></li>
+                                    <li><a href="subtopic11.html" class="text-blue-500">VSEPR theory</a></li>
+                                    <li><a href="subtopic12.html" class="text-blue-500">Concept of hybridization</a></li>
+                                    <li><a href="subtopic13.html" class="text-blue-500">S, p and d orbitals and shapes of some simple molecules</a></li>
+                                    <li><a href="subtopic14.html" class="text-blue-500">Molecular orbital theory</a></li>
+                                    <li><a href="subtopic15.html" class="text-blue-500">Hydrogen bond</a></li>
+                                    <!-- Add more sub-topics here -->
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8">
+                    <h3 class="text-xl font-bold mb-4">Chapter 5</h3>
+                    <table class="w-full">
+                        <tr>
+                            <td colspan="2">
+                                <a href="chapter5.html" class="text-black-500">States Of Matter</a>
+                            </td>
+                            <td class="text-right">
+                                <a href="chapter5.html" class="text-blue-500">Open</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <ul>
+                                    <li><a href="subtopic1.html" class="text-blue-500">Three states of matter</a></li>
+                                    <li><a href="subtopic2.html" class="text-blue-500">Intermolecular interactions</a></li>
+                                    <li><a href="subtopic3.html" class="text-blue-500">Types of bonding</a></li>
+                                    <li><a href="subtopic4.html" class="text-blue-500">Melting and boiling points</a></li>
+                                    <li><a href="subtopic5.html" class="text-blue-500">Role of gas laws in elucidating the concept of the molecule</a></li>
+                                    <li><a href="subtopic6.html" class="text-blue-500">Boyle’s law</a></li>
+                                    <li><a href="subtopic7.html" class="text-blue-500">Charles law</a></li>
+                                    <li><a href="subtopic8.html" class="text-blue-500">Gay Lussac’s law</a></li>
+                                    <li><a href="subtopic9.html" class="text-blue-500">Avogadro’s law</a></li>
+                                    <li><a href="subtopic10.html" class="text-blue-500">Ideal behaviour</a></li>
+                                    <li><a href="subtopic11.html" class="text-blue-500">Empirical derivation of gas equation</a></li>
+                                    <li><a href="subtopic12.html" class="text-blue-500">Ideal gas equation</a></li>
+                                    <li><a href="subtopic13.html" class="text-blue-500">Deviation from ideal behaviour</a></li>
+                                    <li><a href="subtopic14.html" class="text-blue-500">Liquefaction of gases</a></li>
+                                    <li><a href="subtopic15.html" class="text-blue-500">Critical temperature</a></li>
+                                    <li><a href="subtopic16.html" class="text-blue-500">Kinetic energy and molecular speeds (elementary idea)</a></li>
+                                    <li><a href="subtopic17.html" class="text-blue-500">Liquid State – vapour pressure</a></li>
+                                    <li><a href="subtopic18.html" class="text-blue-500">Viscosity and surface tension</a></li>
+                                    <!-- Add more sub-topics here -->
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+
+                <div class="w-1/2 bg-white rounded-lg shadow-md p-4 mb-8">
+                    <h3 class="text-xl font-bold mb-4">Chapter 6</h3>
+                    <table class="w-full">
+                        <tr>
+                            <td colspan="2">
+                                <a href="chapter6.html" class="text-black-500">Thermodynamics</a>
+                            </td>
+                            <td class="text-right">
+                                <a href="chapter6.html" class="text-blue-500">Open</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <ul>
+                                    <li><a href="subtopic1.html" class="text-blue-500">Concepts of System and types of systems, surroundings, work, heat, energy</a></li>
+                                    <li><a href="subtopic2.html" class="text-blue-500">Extensive and intensive properties</a></li>
+                                    <li><a href="subtopic3.html" class="text-blue-500">State functions</a></li>
+                                    <li><a href="subtopic4.html" class="text-blue-500">First law of thermodynamics</a></li>
+                                    <li><a href="subtopic5.html" class="text-blue-500">Internal energy</a></li>
+                                    <li><a href="subtopic6.html" class="text-blue-500">Enthalpy</a></li>
+                                    <li><a href="subtopic7.html" class="text-blue-500">Heat capacity</a></li>
+                                    <li><a href="subtopic8.html" class="text-blue-500">Specific heat</a></li>
+                                    <li><a href="subtopic9.html" class="text-blue-500">Measurement of ∆U and ∆H</a></li>
+                                    <li><a href="subtopic10.html" class="text-blue-500">Hess’s law of constant heat summation</a></li>
+                                    <li><a href="subtopic11.html" class="text-blue-500">Enthalpy of bond dissociation</a></li>
+                                    <li><a href="subtopic12.html" class="text-blue-500">Combustion, formation, atomization</a></li>
+                                    <li><a href="subtopic13.html" class="text-blue-500">Sublimation, phase transition, ionization</a></li>
+                                    <li><a href="subtopic14.html" class="text-blue-500">Solution and dilution</a></li>
+                                    <li><a href="subtopic15.html" class="text-blue-500">Second law of Thermodynamics (brief introduction)</a></li>
+                                    <li><a href="subtopic16.html" class="text-blue-500">Introduction of entropy</a></li>
+                                    <li><a href="subtopic17.html" class="text-blue-500">State function</a></li>
+                                    <li><a href="subtopic18.html" class="text-blue-500">Gibb’s energy change for spontaneous and non-spontaneous processes</a></li>
+                                    <li><a href="subtopic19.html" class="text-blue-500">Criteria for equilibrium</a></li>
+                                    <li><a href="subtopic20.html" class="text-blue-500">Third law of thermodynamics (brief introduction)</a></li>
+                                    <!-- Add more sub-topics here -->
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                
+            
+            </div>
+        
+            <footer class="w-full bg-gray-200 py-4 px-6 bottom-0 left-0 right-0">
+            <div class="container mx-auto flex justify-between">
+                <div>
+                    <h2 class="text-xl font-bold mb-2">Contact Details</h2>
+                    <p class="text-gray-600">Phone: +91-98765-43210</p>
+                    <p class="text-gray-600">Email: learnquest@gmail.com</p>
+                </div>
     
+                <div>
+                    <h2 class="text-xl font-bold mb-2">Classes</h2>
+                    <ul>
+                        <li><a href="#" class="text-blue-500">Class 9th</a></li>
+                        <li><a href="#" class="text-blue-500">Class 10th</a></li>
+                        <li><a href="#" class="text-blue-500">Class 11th</a></li>
+                        <li><a href="#" class="text-blue-500">Class 12th</a></li>
+                    </ul>
+                </div>
     
+                <div>
+                    <h2 class="text-xl font-bold mb-2">Subjects</h2>
+                    <ul>
+                        <li><a href="#" class="text-blue-500">Physics</a></li>
+                        <li><a href="#" class="text-blue-500">Chemistry</a></li>
+                        <li><a href="#" class="text-blue-500">Mathematics</a></li>
+                    </ul>
+                </div>
+            </div>
+            </footer>
+        </div>
+    
+
+
+
+        <script>
+            const navLinks = document.querySelector('.nav-links')
+            function onToggleMenu(e){
+                e.name = e.name === 'menu' ? 'close' : 'menu'
+                navLinks.classList.toggle('top-[9%]')
+            }
+    
+            // JavaScript to toggle the visibility of the dropdown content
+            document.querySelectorAll('.bg-blue-500').forEach(button => {
+                button.addEventListener('click', function () {
+                    const dropdownContent = this.nextElementSibling;
+                    dropdownContent.classList.toggle('hidden');
+                });
+            });
+
+            function playVideo(chapter) {
+                var cards = document.querySelectorAll('.toHide');
+                for (var i = 0; i < cards.length; i++) {
+                    cards[i].style.display = 'none';
+                }
+        
+                document.getElementById(chapter + 'Video').style.display = 'block';
+                document.getElementById('backButton').style.display = 'block';
+            }
+
+            function hideVideo() {
+                var videos = document.querySelectorAll('iframe');
+                for (var i = 0; i < videos.length; i++) {
+                    videos[i].style.display = 'none';
+                }
+
+                var cards = document.querySelectorAll('.toHide');
+                for (var i = 0; i < cards.length; i++) {
+                    cards[i].style.display = 'block';
+                }
+
+                document.getElementById('backButton').style.display = 'none';
+            }
+        
+        </script>
 </body>
+
+
 </html>
