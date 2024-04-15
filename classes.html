@@ -11,38 +11,51 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
         rel="stylesheet">
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    
 </head>
 
 <body class="font-[Poppins] bg-gradient-to-t from-[#7ebc95] to-[#becce5] h-screen">
     <header class="bg-white">
         <nav class="flex justify-between items-center w-[92%]  mx-auto px-5 py-5">
             <div>
-                <img class="w-40 cursor-pointer" src="./images/Logo.png" alt="...">
+                <a href="index.html">
+                    <img src="./images/Logo.png" alt="Home Page">
+                </a>
+                
             </div>
             <div
                 class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
                 <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
                     <li>
-                        <a class="hover:text-gray-500" href="#">Courses</a>
+                        <a class="hover:text-gray-500" href="index.html">Home</a>
                     </li>
                     <li>
-                        <a class="hover:text-gray-500" href="#">Notes</a>
+                        <a class="hover:text-gray-500" href="Courses.html">Courses</a>
                     </li>
                     <li>
-                        <a class="hover:text-gray-500" href="#">Educators</a>
+                        <a class="hover:text-gray-500" href="classes.html">Classes</a>
                     </li>
                     <li>
-                        <a class="hover:text-gray-500" href="#">Help</a>
+                        <a class="hover:text-gray-500" href="educators.html">Educators</a>
                     </li>
                     <li>
-                        <a class="hover:text-gray-500" href="#">Subscription</a>
+                        <a class="hover:text-gray-500" href="../subscription.html">Subscription</a>
                     </li>
                 </ul>
             </div>
-            <div class="flex items-center gap-6">
-                <button class="bg-[#a6c1ee] text-white px-5 py-2 hover:bg-[#87acec]">My Profile</button>
+            <div class="dropdown inline-block relative">
+                <button class="bg-blue-500 text-white font-semibold py-2 px-4 rounded-full inline-flex items-center">
+                  <span class="mr-1">My Profile</span>
+                  <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
+                </button>
+                <ul class="dropdown-menu absolute hidden text-gray-700 pt-1" style="width: 12rem;">
+                  <li class=""><a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Samiksha Deore</a></li>
+                  <li class=""><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">1234567890</a></li>
+                  <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Log Out</a></li>
+                </ul>
                 <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
-            </div>
+              </div>
+        
     </header>
 
     <h1 class="text-3xl font-bold mb-8 pl-32 pt-6">Select Your Class</h1>
@@ -55,16 +68,17 @@
                 </div>
                 <h2 class="text-xl font-bold mb-2">Class 9th</h2>
                 <p class="text-sm text-gray-600 mb-4"></p>
-                <button class="bg-blue-500 text-white px-4 py-2 rounded-full">
-                    Subjects
-                </button>
-                <div class="dropdown-content hidden absolute z-50">
-                    <a href="physics_class9.html" class="block px-4 py-2 text-sm hover:bg-gray-200">Physics</a>
-                    <a href="chemistry_class9.html" class="block px-4 py-2 text-sm hover:bg-gray-200">Chemistry</a>
-                    <a href="maths_class9.html" class="block px-4 py-2 text-sm hover:bg-gray-200">Maths</a>
-                    <a href="biology_class9.html" class="block px-4 py-2 text-sm hover:bg-gray-200">Biology</a>
-                    <!-- Add more chapters as needed -->
-                </div>
+                <div class="dropdown inline-block relative">
+                    <button class="bg-blue-500 text-white font-semibold py-2 px-4 rounded-full inline-flex items-center">
+                      <span class="mr-1">Subjects</span>
+                      <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
+                    </button>
+                    <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
+                      <li class=""><a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="./Chemistry/chemistry_class9.html">Chemistry</a></li>
+                      <li class=""><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="./Physics/physics_class9.html">Physics</a></li>
+                      <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="./Maths/maths_class9.html">Maths</a></li>
+                    </ul>
+                  </div>
             </div>
         </div>
 
@@ -75,16 +89,21 @@
                 </div>
                 <h2 class="text-xl font-bold mb-2">Class 10th</h2>
                 <p class="text-sm text-gray-600 mb-4"></p>
-                <button class="bg-blue-500 text-white px-4 py-2 rounded-full">
-                    Subjects
-                </button>
-                <div class="dropdown-content hidden absolute z-50">
-                    <a href="physics_class10.html" class="block px-4 py-2 text-sm hover:bg-gray-200">Physics</a>
-                    <a href="chemistry_class10.html" class="block px-4 py-2 text-sm hover:bg-gray-200">Chemistry</a>
-                    <a href="maths_class10.html" class="block px-4 py-2 text-sm hover:bg-gray-200">Maths</a>
-                    <a href="biology_class10.html" class="block px-4 py-2 text-sm hover:bg-gray-200">Biology</a>
-                    <!-- Add more chapters as needed -->
-                </div>
+                
+
+                    <div class="dropdown inline-block relative">
+                        <button class="bg-blue-500 text-white font-semibold py-2 px-4 rounded-full inline-flex items-center">
+                          <span class="mr-1">Subjects</span>
+                          <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
+                        </button>
+                        <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
+                          <li class=""><a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="./Chemistry/chemistry_class10.html">Chemistry</a></li>
+                          <li class=""><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="./Physics/physics_class10.html">Physics</a></li>
+                          <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="./Maths/maths_class10.html">Maths</a></li>
+                        </ul>
+                      </div>
+                  
+                  
             </div>
         </div>
 
@@ -95,15 +114,17 @@
                 </div>
                 <h2 class="text-xl font-bold mb-2">Class 11th</h2>
                 <p class="text-sm text-gray-600 mb-4"></p>
-                <button class="bg-blue-500 text-white px-4 py-2 rounded-full">
-                    Subjects
-                </button>
-                <div class="dropdown-content hidden absolute z-50">
-                    <a href="physics_class11.html" class="block px-4 py-2 text-sm hover:bg-gray-200">Physics</a>
-                    <a href="chemistry_class11.html" class="block px-4 py-2 text-sm hover:bg-gray-200">Chemistry</a>
-                    <a href="maths_class11.html" class="block px-4 py-2 text-sm hover:bg-gray-200">Maths</a>
-                    <!-- Add more chapters as needed -->
-                </div>
+                <div class="dropdown inline-block relative">
+                    <button class="bg-blue-500 text-white font-semibold py-2 px-4 rounded-full inline-flex items-center">
+                      <span class="mr-1">Subjects</span>
+                      <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
+                    </button>
+                    <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
+                      <li class=""><a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="./Chemistry/chemistry_class11.html">Chemistry</a></li>
+                      <li class=""><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="./Physics/physics_class11.html">Physics</a></li>
+                      <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="./Maths/maths_class11.html">Maths</a></li>
+                    </ul>
+                  </div>
             </div>
         </div>
 
@@ -115,15 +136,20 @@
                 </div>
                 <h2 class="text-xl font-bold mb-2">Class 12th</h2>
                 <p class="text-sm text-gray-600 mb-4"></p>
-                <button class="bg-blue-500 text-white px-4 py-2 rounded-full">
-                    Subjects
-                </button>
-                <div class="dropdown-content hidden absolute z-50">
-                    <a href="physics_class12.html" class="block px-4 py-2 text-sm hover:bg-gray-200">Physics</a>
-                    <a href="chemistry_class12.html" class="block px-4 py-2 text-sm hover:bg-gray-200">Chemistry</a>
-                    <a href="maths_class12.html" class="block px-4 py-2 text-sm hover:bg-gray-200">Maths</a>
-                    <!-- Add more chapters as needed -->
-                </div>
+
+                    <div class="dropdown inline-block relative">
+                      <button class="bg-blue-500 text-white font-semibold py-2 px-4 rounded-full inline-flex items-center">
+                        <span class="mr-1">Subjects</span>
+                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
+                      </button>
+                      <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
+                        <li class=""><a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="./Chemistry/chemistry_class12.html">Chemistry</a></li>
+                        <li class=""><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="./Physics/physics_class12.html">Physics</a></li>
+                        <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="./Maths/maths_class12.html">Maths</a></li>
+                      </ul>
+                    </div>
+                  
+                
             </div>
         </div>
     </div>
@@ -132,13 +158,7 @@
 
 
     <script>
-        const navLinks = document.querySelector('.nav-links')
-        function onToggleMenu(e){
-            e.name = e.name === 'menu' ? 'close' : 'menu'
-            navLinks.classList.toggle('top-[9%]')
-        }
-
-        // JavaScript to toggle the visibility of the dropdown content
+            // JavaScript to toggle the visibility of the dropdown content
         document.querySelectorAll('.bg-blue-500').forEach(button => {
             button.addEventListener('click', function () {
                 const dropdownContent = this.nextElementSibling;

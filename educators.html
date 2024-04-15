@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <title>Educators</title>
+</head>
+
+<body class="font-[Poppins] bg-gradient-to-t from-[#7ebc95] to-[#becce5] min-h-screen">
+    <header class="bg-white">
+        <nav class="flex justify-between items-center w-[92%]  mx-auto px-5 py-5">
+            <div>
+                <a href="index.html">
+                    <img src="./images/Logo.png" alt="Home Page">
+                </a>
+                
+            </div>
+            <div
+                class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+                    <li>
+                        <a class="hover:text-gray-500" href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="Courses.html">Courses</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="classes.html">Classes</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="educators.html">Educators</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="../subscription.html">Subscription</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="dropdown inline-block relative">
+                <button class="bg-blue-500 text-white font-semibold py-2 px-4 rounded-full inline-flex items-center">
+                  <span class="mr-1">My Profile</span>
+                  <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
+                </button>
+                <ul class="dropdown-menu absolute hidden text-gray-700 pt-1" style="width: 12rem;">
+                  <li class=""><a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Samiksha Deore</a></li>
+                  <li class=""><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">1234567890</a></li>
+                  <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Log Out</a></li>
+                </ul>
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+              </div>
+        
+    </header>
+
+
+    <div class="container mx-auto py-8 px-6">
+        <h1 class="text-3xl font-bold text-center mb-8">Meet Our Educators</h1>
+
+
+        <div class="flex flex-wrap justify-center gap-8">
+            <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                <img class="w-full" src="./images/educator1.jpg" alt="Educator 1">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Alakh Pandey</div>
+                    <p class="text-gray-700 text-base">
+                        Physics Wallahhhhhhh 
+                    </p>
+                </div>
+            </div>
+
+        
+            <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                <img class="w-full" src="./images/educator2.jpeg" alt="Educator 2">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Namo Kaul</div>
+                    <p class="text-gray-700 text-base">
+                        Killer Visualisation.....
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="flex flex-wrap justify-center gap-8 mt-8">
+            
+            <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                <img class="w-full" src="./images/educator3.jpeg" alt="Educator 3">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Jayant Nagda</div>
+                    <p class="text-gray-700 text-base">
+                        Baap of all Mathematics 
+                    </p>
+                </div>
+            </div>
+
+            
+            <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                <img class="w-full" src="./images/educator4.jpeg" alt="Educator 4">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Sakshi Vore</div>
+                    <p class="text-gray-700 text-base">
+                        Expert of Inorganic, Organic and Physical Chemistry
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w-full bg-gray-200 py-4 px-6 bottom-0 left-0 right-0">
+        <div class="container mx-auto flex justify-between">
+            <!-- Column 1: Company Info -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">LearnQuest</h3>
+                <p>Designed by Samiksha Deore</p>
+                <p class="mt-4">Address: IIT (BHU) Varanasi</p>
+                <p>Phone: 9876543210</p>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Social Media Links -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                <div class="flex space-x-4">
+                    <a href="https://github.com/samikshadeore42/EduGamer"><img src="images/github.jpg" alt="GitHub" class="w-8 h-8 mx-2"></a>
+                <a href="https://www.instagram.com/samiksha_deore.42/"><img src="images/Instagram.jpg" alt="Instagram" class="w-8 h-8 mx-2"></a>
+                <a href="https://www.linkedin.com/in/samiksha-deore-b180242aa/"><img src="images/LinkedIn.jpg" alt="Linkedin" class="w-8 h-8 mx-2"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
